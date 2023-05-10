@@ -7,7 +7,7 @@ const Header = () => {
     <div className='ContainerHeader'>
     <NavBar />
     <div className='title'>
-     <h1>FORRAJERIA DAMIAN</h1>
+     <h1>Tienda de Mascotas Odie</h1>
      </div>
     </div>
     </>

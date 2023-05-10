@@ -1,10 +1,30 @@
 .navbar {
   border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 .navbar ul {
   display: flex;
-  justify-content: end;
   list-style-type: none;
   padding: 2rem;
   gap: 3rem;    
+}
+
+.Logo{
+  max-width: 5rem;
+  overflow: hidden;
+}
+
+.Logo >img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+@media (max-width:750px){
+  .navbar ul{
+    display: none;
+  }
 }
