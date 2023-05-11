@@ -1,21 +1,28 @@
 import React from 'react'
 import '../styles/navbar.css';
 import Logo from '../assets/petShopLogo.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
 <>
 <div className="navbar">
-    <div className='Logo'>
+    <NavLink className='Logo'>
         <img src={Logo} alt="Logo" />
-    </div>
+    </NavLink>
     <ul>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Contacto</li>
-        <li>Sobre Nosotros</li>
-        <li>Iniciar Sesión</li>
+        <li><NavLink>Inicio</NavLink></li>
+        <li><NavLink>Productos</NavLink></li>
+        <li><NavLink>Contacto</NavLink></li>
+        <li><NavLink>Sobre Nosotros</NavLink></li>
+        <li><NavLink>Iniciar Sesión</NavLink></li>
     </ul>
+    <div className='barsMenu'>
+    <FontAwesomeIcon icon={faBars} />
+    </div>
 </div>
 </>
     )

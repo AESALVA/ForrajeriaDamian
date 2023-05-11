@@ -1,19 +1,21 @@
 import React from 'react';
 import '../styles/footer.css';
-import Logo from '../assets/petShopLogo.png'
+import Logo from '../assets/petShopLogo.png';
+import { NavLink } from "react-router-dom";
+
 
 const Footer = () => {
   return (
     <>
     <div className='ContainerFooter'>
-      <div className='Logo'>
+      <NavLink className='Logo'>
         <img src={Logo} alt="Logo"  />
-      </div>
+      </NavLink>
       <ul>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Contacto</li>
-        <li>Sobre Nosotros</li>
+        <li><NavLink>Inicio</NavLink></li>
+        <li><NavLink>Productos</NavLink></li>
+        <li><NavLink>Contacto</NavLink></li>
+        <li><NavLink>Sobre Nosotros</NavLink></li>
       </ul>
       <div className='copyright'>
         <span>Copyright © 2023 Tienda de Mascotas Odie</span>
