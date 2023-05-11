@@ -17,6 +17,9 @@
   color: #fff;
   position: relative;
 }
+.navbar a:hover{
+  color: #fff;
+}
 .navbar a::after{
   content: "";
   position: absolute;
@@ -38,6 +41,7 @@
 .Logo{
   max-width: 5rem;
   overflow: hidden;
+  margin: 1rem 2rem;
 }
 
 .Logo >img{
@@ -64,7 +68,8 @@
     height: 3rem;
     font-size: 2rem;
     border-radius: .5rem;
-    border: 2px solid #151515;
+    border: 2px solid #a7a7a7;
     color: #fff;
+    margin: 1rem 2rem;
   }
 }

@@ -4,6 +4,8 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import Contact from './components/Contact';
 import About from './components/About';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
 
