@@ -58,7 +58,27 @@
 }
 
 .ContainerFooter > .copyright {
-    color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  color: #fff;
   padding: 2rem;
-  text-align: center;
+}
+
+.SocialIcons{
+  display: flex;
+  font-size: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 4rem;
+}
+
+@media (max-width:750px){
+  .copyright{
+  flex-direction: column;
+  gap: 2rem; 
+  }
 }
