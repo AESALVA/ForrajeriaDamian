@@ -47,7 +47,7 @@
 }
 
 .barsMenu{
-  display:none ;
+  display:none;
 }
 
 @media (max-width:750px){
@@ -65,5 +65,6 @@
     font-size: 2rem;
     border-radius: .5rem;
     border: 2px solid #151515;
+    color: #fff;
   }
 }
