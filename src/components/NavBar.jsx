@@ -13,6 +13,9 @@ const NavBar = () => {
     <NavLink className='Logo'>
         <img src={Logo} alt="Logo" />
     </NavLink>
+    <div className='Title'>
+        <h1>Tienda de Mascotas Odi</h1>
+     </div>
     <ul>
         <li><NavLink>Inicio</NavLink></li>
         <li><NavLink>Productos</NavLink></li>

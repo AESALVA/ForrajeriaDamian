@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <>
     <div className='ContainerFooter mt-auto'>
-      <NavLink className='Logo'>
-        <img src={Logo} alt="Logo"  />
+      <NavLink className='LogoFooter'>
+        <img src={Logo} alt="LogoFooter"  />
       </NavLink>
       <ul>
         <li><NavLink>Inicio</NavLink></li>
@@ -26,7 +26,7 @@ const Footer = () => {
         <li><NavLink><FontAwesomeIcon icon={faInstagram} /></NavLink></li>
         <li><NavLink><FontAwesomeIcon icon={faWhatsapp} /></NavLink></li>
       </ul>
-        <span>Copyright © 2023 Tienda de Mascotas Odie</span>
+        <span>Copyright © 2023 Tienda de Mascotas Odi</span>
       </div>
     </div>
     </>
