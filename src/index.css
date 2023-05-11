@@ -9,6 +9,7 @@
 
 body{
   background: linear-gradient(180deg,#000c04,#0c220c);
+  min-width: 100%;
 }
 
 .title{
