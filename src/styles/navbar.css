@@ -24,7 +24,7 @@
   bottom: -6px;
   width: 100%;
   height: 3px;
-  background: green;
+  background: #fff;
   border-radius: 5px;
   transform-origin: right;
   transform: scaleX(0);
