@@ -7,12 +7,34 @@
   background: linear-gradient(0deg,#000c04,#0c220c);
 }
 
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    scale: 1.5;
+    opacity: 0;
+  }
+}
+
 .LogoFooter {
   max-width: 12rem;
   max-height: 12rem;
+  transition: scale 0.15s;
   margin: 2rem;
   border-radius: 50%;
-  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, #2bff00, #0a550e);
+  border: 2px solid #151515;
+  z-index: 1;
+}
+.LogoFooter:hover{
+  transition: 1s;
+  border: 2px solid #2bff00;
+  box-shadow: 0px 0px 15px 7px #2bff00;
 }
 
 .LogoFooter > img {
@@ -20,6 +42,27 @@
   height: 100%;
   border-radius: 50%;
 }
+
+.LogoFooter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #2bff00, #0a550e);
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0.95;
+  pointer-events: none;
+  transition: 1s;
+}
+.LogoFooter:hover::before {
+  animation: pulse 1s;
+  transition: 1s;
+}
+
 
 .ContainerFooter > ul {
   display: flex;
@@ -31,16 +74,16 @@
   gap: 3rem;
   margin: 0;
 }
-.ContainerFooter a {
+.ulFooter a {
   text-decoration: none;
   color: #fff;
   position: relative;
 }
-.ContainerFooter a:hover{
+.ulFooter a:hover{
   color: #fff;
 }
 
-.ContainerFooter a::after {
+.ulFooter a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -54,7 +97,7 @@
   transition: transform 0.5s;
 }
 
-.ContainerFooter a:hover::after {
+.ulFooter a:hover::after {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -77,6 +120,12 @@
   margin: 0;
   padding: 0;
   gap: 4rem;
+}
+.SocialIcons a{
+  color: #fff;
+}
+.SocialIcons a:hover{
+  color: #fff;
 }
 
 @media (max-width:750px){

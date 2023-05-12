@@ -13,7 +13,7 @@ const Footer = () => {
       <NavLink className='LogoFooter'>
         <img src={Logo} alt="LogoFooter"  />
       </NavLink>
-      <ul>
+      <ul className='ulFooter'>
         <li><NavLink>Inicio</NavLink></li>
         <li><NavLink>Productos</NavLink></li>
         <li><NavLink>Contacto</NavLink></li>
