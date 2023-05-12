@@ -9,9 +9,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   height: 100%;
-  /* box-shadow: 0px 0px 15px 7px #fff; */
+  padding: 3rem 1rem;
   border: 2px solid #fff;
   border-radius: 1rem;
 }
@@ -25,6 +26,14 @@
 .img > img {
   width: 100%;
 }
+.imgBottom{
+    padding: 2rem;
+    max-width: 60rem;
+}
+.imgBottom > img{
+    width: 100%;
+}
+
 .Card {
   display: flex;
   flex-direction: column;
@@ -34,4 +43,6 @@
   max-height: 50rem;
   padding: 2rem;
   gap: 2rem;
+  border: 2px solid #fff;
+  border-radius: 1rem;
 }
