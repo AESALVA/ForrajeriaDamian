@@ -22,9 +22,9 @@ const Footer = () => {
 
       <div className='copyright'>
       <ul className='SocialIcons'>
-        <li><NavLink><FontAwesomeIcon icon={faFacebook} /></NavLink></li>
-        <li><NavLink><FontAwesomeIcon icon={faInstagram} /></NavLink></li>
-        <li><NavLink><FontAwesomeIcon icon={faWhatsapp} /></NavLink></li>
+        <li><NavLink className="d-flex"><FontAwesomeIcon icon={faFacebook} /></NavLink></li>
+        <li><NavLink className="d-flex"><FontAwesomeIcon icon={faInstagram} /></NavLink></li>
+        <li><NavLink className="d-flex"><FontAwesomeIcon icon={faWhatsapp} /></NavLink></li>
       </ul>
         <span>Copyright © 2023 Tienda de Mascotas Odi</span>
       </div>
