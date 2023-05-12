@@ -1,10 +1,10 @@
 .ContainerFooter {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(0deg,#000c04,#0c220c);
 }
 
 .LogoFooter {
@@ -29,6 +29,7 @@
   list-style-type: none;
   padding: 2rem;
   gap: 3rem;
+  margin: 0;
 }
 .ContainerFooter a {
   text-decoration: none;
