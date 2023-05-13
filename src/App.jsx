@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </>

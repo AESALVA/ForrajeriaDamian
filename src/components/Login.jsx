@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/login.css";
 import imgLogin from "../assets/landing2.png";
 import { NavLink } from "react-router-dom";
+import { faEnvelope,faLock,faEye,faEyeSlash, faE } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 const Login = () => {
@@ -13,23 +16,33 @@ const Login = () => {
           <form className="FormLogin">
             <div className="InputLogin">
             <label>
-                Email
+                <FontAwesomeIcon icon={faEnvelope} />{' '}Email
               </label>
               <span>
               </span>
-              <input />
+              <input 
+              placeholder="Damian@TiendaDeMascotas.com"
+              type="mail"
+              required
+              maxLength={50}
+              />
              
             </div>
             <div className="InputLogin">
             <label>
-                Contraseña
+            <FontAwesomeIcon icon={faLock} />{' '}Contraseña
               </label>
               <span>
               </span>
-              <input />
+              <input 
+              type="password"
+              placeholder="Damian9"
+              required
+              maxLength={30}
+              />
             </div>
             <NavLink className='LoginBtn'>Iniciar</NavLink>
-            <div className="LoginRegister">No tienes cuenta?<NavLink>Registrate</NavLink></div>
+            <div className="LoginRegister">No tienes cuenta?<NavLink to='/register'>{' '}Registrate</NavLink></div>
             <div className="forgotpass"><NavLink>Olvidaste tu contraseña?</NavLink></div>
           </form>
         </div>

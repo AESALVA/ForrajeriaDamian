@@ -37,11 +37,11 @@ const NavBar = () => {
     {menuResponsive==='NavListResponsive'?(<FontAwesomeIcon icon={faBars} onClick={handleMenu} />):(<FontAwesomeIcon icon={faX  } onClick={handleMenu} />)} 
     </div>
     <ul className={menuResponsive}>
-        <li><NavLink>Inicio</NavLink></li>
-        <li><NavLink>Productos</NavLink></li>
-        <li><NavLink>Contacto</NavLink></li>
-        <li><NavLink>Sobre Nosotros</NavLink></li>
-        <li><NavLink>Iniciar Sesión</NavLink></li>
+        <li><NavLink to='/'>Inicio</NavLink></li>
+        <li><NavLink >Productos</NavLink></li>
+        <li><NavLink to='/contact'>Contacto</NavLink></li>
+        <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
+        <li><NavLink to='/login'>Iniciar Sesión</NavLink></li>
     </ul>
 </div>
 </>

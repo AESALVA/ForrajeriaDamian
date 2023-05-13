@@ -10,14 +10,14 @@ const Footer = () => {
   return (
     <>
     <div className='ContainerFooter mt-auto'>
-      <NavLink className='LogoFooter'>
+      <NavLink to='/' className='LogoFooter'>
         <img src={Logo} alt="LogoFooter"  />
       </NavLink>
       <ul className='ulFooter'>
-        <li><NavLink>Inicio</NavLink></li>
+        <li><NavLink to='/'>Inicio</NavLink></li>
         <li><NavLink>Productos</NavLink></li>
-        <li><NavLink>Contacto</NavLink></li>
-        <li><NavLink>Sobre Nosotros</NavLink></li>
+        <li><NavLink to='/contact'>Contacto</NavLink></li>
+        <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
       </ul>
 
       <div className='copyright'>
