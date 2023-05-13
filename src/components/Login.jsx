@@ -2,13 +2,7 @@ import React from "react";
 import "../styles/login.css";
 import imgLogin from "../assets/landing2.png";
 import { NavLink } from "react-router-dom";
-import {
-  faEnvelope,
-  faLock,
-  faEye,
-  faEyeSlash,
-  faE,
-} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope,faLock,faEye,faEyeSlash,} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import imgLoginMobile from "../assets/LoginMobile.png";
 
@@ -51,7 +45,7 @@ const Login = () => {
               No tienes cuenta?<NavLink to="/register"> Registrate</NavLink>
             </div>
             <div className="forgotpass">
-              <NavLink to='/forgotPass'>Olvidaste tu contraseña?</NavLink>
+              <NavLink to="/forgotPass">Olvidaste tu contraseña?</NavLink>
             </div>
           </form>
         </div>
