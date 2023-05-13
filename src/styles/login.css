@@ -1,0 +1,76 @@
+.ContainerLogin {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../assets/Bg.jpg");
+  color: #fff;
+  padding: 1rem;
+}
+.Login {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.imgLogin {
+  max-width: 50rem;
+  padding: 1rem;
+}
+
+.imgLogin > img {
+  width: 100%;
+  opacity: 0.8;
+}
+.CardLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  max-width: 50rem;
+  max-height: 50rem;
+  color: #ffc918;
+  gap: 2rem;
+}
+.FormLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.InputLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.InputLogin > input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+}
+
+.LoginBtn {
+  text-decoration: none;
+  color: #ffc918;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+.LoginBtn:hover {
+  color: #ffc918;
+}
+.LoginBtn:active {
+  transition: all;
+  transform: scale(0.9);
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}

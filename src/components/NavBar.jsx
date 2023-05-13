@@ -31,7 +31,7 @@ const NavBar = () => {
         <li><NavLink>Productos</NavLink></li>
         <li><NavLink to='/contact'>Contacto</NavLink></li>
         <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
-        <li><NavLink>Iniciar Sesión</NavLink></li>
+        <li><NavLink to='/login' >Iniciar Sesión</NavLink></li>
     </ul>
     <div className='barsMenu'>
     {menuResponsive==='NavListResponsive'?(<FontAwesomeIcon icon={faBars} onClick={handleMenu} />):(<FontAwesomeIcon icon={faX  } onClick={handleMenu} />)} 
