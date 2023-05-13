@@ -30,7 +30,7 @@ const Login = () => {
             </div>
             <NavLink className='LoginBtn'>Iniciar</NavLink>
             <div className="LoginRegister">No tienes cuenta?<NavLink>Registrate</NavLink></div>
-            <div className="forgotpass">Olvidaste tu contraseña?</div>
+            <div className="forgotpass"><NavLink>Olvidaste tu contraseña?</NavLink></div>
           </form>
         </div>
         <div className="imgLogin">

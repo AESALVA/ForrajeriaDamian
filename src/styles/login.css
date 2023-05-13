@@ -29,17 +29,22 @@
   padding: 2rem;
   border: 2px solid #fff;
   border-radius: 1rem;
-  max-width: 50rem;
-  max-height: 50rem;
+  width: 40rem;
+  height: 43rem;
   color: #ffc918;
-  gap: 2rem;
+  gap: 1rem;
 }
+.CardLogin h2 {
+  padding: 1rem;
+}
+
 .FormLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  width: 100%;
+  padding: 2rem;
   gap: 1rem;
 }
 .InputLogin {
@@ -56,21 +61,66 @@
   width: 100%;
   background: transparent;
   outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.LoginRegister,
+.forgotpass {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.LoginRegister a {
+  text-decoration: none;
+  color: #ffc918;
+}
+.LoginRegister a:hover {
+  color: #fff;
+}
+.forgotpass a {
+  text-decoration: none;
+  color: #ffc918;
+}
+.forgotpass a:hover {
+  color: #fff;
 }
 
 .LoginBtn {
   text-decoration: none;
   color: #ffc918;
-  border: 2px solid #fff;
-  border-radius: 1rem;
-  padding: 1rem 3rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  position: relative;
 }
 .LoginBtn:hover {
   color: #ffc918;
 }
-.LoginBtn:active {
-  transition: all;
-  transform: scale(0.9);
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
+
+.LoginBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.LoginBtn:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+@media (max-width: 800px) {
+  .CardLogin {
+    padding: 2rem 1rem;
+  }
+  .FormLogin {
+    padding: 2rem 0;
+  }
 }
