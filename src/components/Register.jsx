@@ -25,7 +25,7 @@ const Register = () => {
                 {" "}
                 <FontAwesomeIcon icon={faUser} /> Nombre de Usuario
               </label>
-              <input type="text" required maxLength={50} />
+              <input type="text" required maxLength={50} placeholder="JulioDamian" />
               <span className="Conditions">
                 Al menos una letra mayúscula, sin números
               </span>
@@ -35,7 +35,7 @@ const Register = () => {
                 {" "}
                 <FontAwesomeIcon icon={faEnvelope} /> Email
               </label>
-              <input type="mail" required maxLength={40} />
+              <input type="mail" required maxLength={40} placeholder="Damian@TiendaDeMascotas.com" />
               <span className="Conditions"></span>
             </div>
             <div className="InputRegister">
@@ -43,7 +43,7 @@ const Register = () => {
                 {" "}
                 <FontAwesomeIcon icon={faLock} /> Contraseña
               </label>
-              <input type="password" required maxLength={30} />
+              <input type="password" required maxLength={30} placeholder="Damian9" />
               <span className="Conditions">
                 Al menos una letra mayúscula, una minúscula y un número
               </span>
@@ -53,7 +53,7 @@ const Register = () => {
                 {" "}
                 <FontAwesomeIcon icon={faLock} /> Repetir Contraseña
               </label>
-              <input type="password" required maxLength={30} />
+              <input type="password" required maxLength={30} placeholder="Damian9" />
             </div>
             <NavLink className="RegisterBtn">Registrarse</NavLink>
             <div className="LoginRegister">
