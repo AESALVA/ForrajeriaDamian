@@ -14,7 +14,6 @@ const Register = () => {
           <img src={RegistroImg} alt="registroImg" />
         </div>
         <div className="CardRegister">
-       
           <h2>Registro</h2>
           <div className="ImgRegisterMobile">
           <img src={RegistroImgMobile} alt="registroImg" />

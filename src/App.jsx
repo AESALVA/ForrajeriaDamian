@@ -7,6 +7,7 @@ import About from "./components/About";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ForgotPass from "./components/ForgotPass";
+import ResetPass from "./components/ResetPass";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgotPass" element={<ForgotPass />} />
+        <Route path="/resetPass" element={<ResetPass />} />
       </Routes>
       <Footer />
     </>
