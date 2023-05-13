@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ForgotPass from "./components/ForgotPass";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgotPass" element={<ForgotPass />} />
       </Routes>
       <Footer />
     </>

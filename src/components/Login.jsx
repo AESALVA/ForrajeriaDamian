@@ -18,7 +18,6 @@ const Login = () => {
       <div className="Login">
         <div className="CardLogin">
           <h2>Iniciar Sesión</h2>
-
           <form className="FormLogin">
             <div className="InputLogin">
               <label>
@@ -32,7 +31,6 @@ const Login = () => {
                 maxLength={50}
               />
             </div>
-
             <div className="InputLogin">
               <label>
                 <FontAwesomeIcon icon={faLock} /> Contraseña
@@ -53,7 +51,7 @@ const Login = () => {
               No tienes cuenta?<NavLink to="/register"> Registrate</NavLink>
             </div>
             <div className="forgotpass">
-              <NavLink>Olvidaste tu contraseña?</NavLink>
+              <NavLink to='/forgotPass'>Olvidaste tu contraseña?</NavLink>
             </div>
           </form>
         </div>

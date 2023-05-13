@@ -1,0 +1,108 @@
+.ContainerForgotPass{
+    min-height: 100vh;
+    width: 100%;
+    background: url("../assets/Bg.jpg");
+    color: #fff;
+    padding: 1rem;
+}
+
+.ForgotPass{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.imgForgotPass{
+    max-width: 50rem;
+    padding: 1rem;
+}
+.imgForgotPass > img{
+    width: 100%;
+}
+.CardForgotPass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    width: 40rem;
+    color: #ffc918;
+    gap: 1rem;
+}
+
+.CardForgotPass h2{
+    padding: 1rem;
+}
+
+.FormForgotPass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.InputForgotPass{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1rem;
+    gap: .5rem;
+    width: 100%;
+}
+.InputForgotPass > input{
+    width: 100%;
+    padding: 1rem;
+    background: #151515;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.ForgotBtn{
+    text-decoration: none;
+    color: #ffc918;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.ForgotBtn:hover{
+    color: #fff;
+}
+.ForgotBtn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.ForgotBtn:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+@media (max-width: 800px) {
+    .CardForgotPass {
+      padding: 2rem 1rem;
+    }
+    .FormForgotPass {
+      padding: 2rem 0;
+    }
+  }
+  
