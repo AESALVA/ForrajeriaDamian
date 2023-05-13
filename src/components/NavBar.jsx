@@ -27,10 +27,10 @@ const NavBar = () => {
         <h1>Tienda de Mascotas Odi</h1>
      </div>
     <ul className='ul'>
-        <li><NavLink>Inicio</NavLink></li>
+        <li><NavLink to='/'>Inicio</NavLink></li>
         <li><NavLink>Productos</NavLink></li>
-        <li><NavLink>Contacto</NavLink></li>
-        <li><NavLink>Sobre Nosotros</NavLink></li>
+        <li><NavLink to='/contact'>Contacto</NavLink></li>
+        <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
         <li><NavLink>Iniciar Sesión</NavLink></li>
     </ul>
     <div className='barsMenu'>
