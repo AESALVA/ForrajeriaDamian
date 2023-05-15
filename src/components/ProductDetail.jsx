@@ -1,25 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/productDetail.css";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const ProductDetail = ({ product }) => {
+  const [showDetailOn, setShowDetailOn] = useState("ShowDetail");
+
+  const ShowDetail = () => {
+    if (showDetailOn === "ShowDetail") {
+      setShowDetailOn("ShowDetailOn");
+    } else {
+      setShowDetailOn("ShowDetail");
+    }
+  };
+
   return (
     <div className="DetailContainer">
       <div className="Detail">
-        <div className="DetailImg">
-          <img src={product.img} alt="detalleArticulo" />
+        <div className="DetailCard">
+          <div className="DetailImg">
+            <img src={product.img} alt="detalleArticulo" />
+            <p>
+              {product.disponibility ? (
+                <>Producto Disponible</>
+              ) : (
+                <>Sin Stock</>
+              )}
+            </p>
+          </div>
+          <div className="CardDetail">
+            <h1>{product.title}</h1>
+            <h3>{`Categoria: ${product.category}`}</h3>
+            <h3>{`Sabor: ${product.type}`}</h3>
+            {product.subtitle ? (
+              <>
+                <h3>{`Calidad: ${product.subtitle}`}</h3>
+              </>
+            ) : (
+              <>
+                <h3>Calidad: Regular</h3>
+              </>
+            )}
+            <p>Precio: $ {product.price}</p>
+            <div className="Detalles">
+              <NavLink onClick={ShowDetail}>
+                Mas detalles <FontAwesomeIcon icon={faChevronDown} />
+              </NavLink>  
+              <span className={showDetailOn}>
+                <span className="Description">{product.description}</span>
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="CardDetail">
-          <h1>{product.title}</h1>
-          <h3>{`Categoria: ${product.category}`}</h3>
-          <h3>{`Sabor: ${product.type}`}</h3>
-          <h3>{`Calidad: ${product.subtitle}`}</h3>
-          <h2>Mas detalles del producto</h2>
-          <p>{product.description}</p>
-          <p>Precio: $ {product.price}</p>
-          <p>
-            {product.disponibility ? <>Producto Disponible</> : <>Sin Stock</>}
-          </p>
+        <div className="DetailFooter">
           <div className="DetailBtn">
             <NavLink>Comprar</NavLink>
             <NavLink>Añadir al carrito</NavLink>

@@ -1,31 +1,115 @@
-.DetailContainer{
-    width: 100%;
-    background: url("../assets/Bg.jpg");
-    color: #fff;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
+.DetailContainer {
+  width: 100%;
+  background: url("../assets/Bg.jpg");
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
-.Detail{
+.Detail {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
+.DetailCard{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 2px solid #fff;
-    border-radius: 1rem;
 }
-.CardDetail{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    color: #ffc918;
-}
-
-.DetailImg{
-    max-width: 30rem;
-}
-
-.DetailImg > img{
+.DetailFooter{
     width: 100%;
+    padding: 1rem;
+}
+.DetailBtn{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 1rem;
+gap: 3rem;
+}
+.DetailBtn a{
+    text-decoration: none;
+    color: #ffc918;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #000c04, #0c220c);
+}
+.DetailBtn a:hover{
+    color: #fff;
+}
+
+.CardDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  color: #ffc918;
+}
+
+.DetailImg {
+  max-width: 30rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.DetailImg > img {
+  width: 100%;
+}
+.Detalles {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #000c04, #0c220c);
+  position: relative;
+  margin: 0 0 5rem 0;
+  padding: 1rem 0 1rem 0;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.Detalles a {
+  color: #ffc918;
+  text-decoration: none;
+}
+.Detalles a:hover {
+  color: #fff;
+}
+.ShowDetail {
+  display: flex;
+  padding: 0 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  transform: scale(1, 0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: top;
+  background: linear-gradient(0deg, #000c04, #0c220c);
+  border-radius: 0 0 1rem 1rem;
+  transform: opacity(0);
+}
+.ShowDetailOn {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 1rem 1rem 1rem;
+  width: 100%;
+  margin: 0;
+  transform: scale(1, 1);
+  transition: transform 400ms ease-in-out;
+  transform-origin: top;
+  background: linear-gradient(0deg, #000c04, #0c220c);
+  border-radius: 0 0 1rem 1rem;
+  transform: opacity(1);
+}
+
+.ShowDetail .Description {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.ShowDetailOn .Description {
+  opacity: 1;
+  transition: opacity 350ms ease-in-out 250ms;
 }
