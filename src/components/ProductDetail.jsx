@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/productDetail.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const ProductDetail = ({ product }) => {
   const [showDetailOn, setShowDetailOn] = useState("ShowDetail");
@@ -56,7 +56,7 @@ const ProductDetail = ({ product }) => {
         <div className="DetailFooter">
           <div className="DetailBtn">
             <NavLink>Comprar</NavLink>
-            <NavLink>Añadir al carrito</NavLink>
+            <NavLink><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir al carrito</NavLink>
           </div>
         </div>
       </div>
