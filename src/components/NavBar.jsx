@@ -28,7 +28,7 @@ const NavBar = () => {
      </div>
     <ul className='ul'>
         <li><NavLink to='/'>Inicio</NavLink></li>
-        <li><NavLink>Productos</NavLink></li>
+        <li><NavLink to='/products'>Productos</NavLink></li>
         <li><NavLink to='/contact'>Contacto</NavLink></li>
         <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
         <li><NavLink to='/login' >Iniciar Sesión</NavLink></li>
@@ -38,10 +38,10 @@ const NavBar = () => {
     </div>
     <ul className={menuResponsive}>
         <li><NavLink to='/'>Inicio</NavLink></li>
-        <li><NavLink >Productos</NavLink></li>
+        <li><NavLink to='/products' >Productos</NavLink></li>
         <li><NavLink to='/contact'>Contacto</NavLink></li>
         <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
-        <li><NavLink to='/login'>Iniciar Sesión</NavLink></li>
+        <li><NavLink to='/login'>Iniciar Sesión</NavLink></li>  
     </ul>
 </div>
 </>

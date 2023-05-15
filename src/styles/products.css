@@ -1,0 +1,16 @@
+.ContainerProducts{
+    width: 100%;
+    background: url("../assets/Bg.jpg");
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+.TitleProducts{
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+}

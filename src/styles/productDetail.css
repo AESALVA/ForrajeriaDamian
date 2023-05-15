@@ -1,0 +1,31 @@
+.DetailContainer{
+    width: 100%;
+    background: url("../assets/Bg.jpg");
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.Detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+}
+.CardDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    color: #ffc918;
+}
+
+.DetailImg{
+    max-width: 30rem;
+}
+
+.DetailImg > img{
+    width: 100%;
+}

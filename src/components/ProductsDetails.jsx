@@ -1,9 +1,9 @@
-import React from "react";
-import Product from "./Product";
-import "../styles/products.css";
+import React, { useEffect, useState } from "react";
+import ProductDetail from "./ProductDetail";
+import { useParams } from "react-router-dom";
 import ProductImg from "../assets/productImg.png";
 
-const Products = () => {
+const ProductsDetails = () => {
   const DATA = [
     {
       id: "1",
@@ -16,6 +16,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "2",
@@ -27,6 +28,7 @@ const Products = () => {
         "Mas de doce meses 25% de proteinas 100% ingredientes naturales 0% soja",
       price: "500",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "3",
@@ -38,6 +40,7 @@ const Products = () => {
         "Mas de doce meses 26% de proteinas 100% ingredientes naturales 0% soja",
       price: "700",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "4",
@@ -50,6 +53,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "5",
@@ -62,6 +66,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "6",
@@ -74,6 +79,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "7",
@@ -86,6 +92,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "8",
@@ -98,6 +105,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "9",
@@ -110,6 +118,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "10",
@@ -122,6 +131,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "11",
@@ -134,6 +144,7 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
     {
       id: "12",
@@ -146,21 +157,23 @@ const Products = () => {
         "Mas de doce meses 23% de proteinas 100% ingredientes naturales 0% soja",
       price: "300",
       img: ProductImg,
+      disponibility:true
     },
   ];
 
+  const params = useParams();
+  const [product, setProduct] = useState("");
+
+  useEffect(() => {
+    const aux = DATA.find((article) => article.id === params.id);
+    setProduct(aux);
+  }, []);
+
   return (
     <>
-      <div className="TitleProducts">
-        <h2>Lista de Productos</h2>
-      </div>
-      <div className="ContainerProducts">
-        {DATA.map((product, i) => (
-          <Product key={i} product={product} />
-        ))}
-      </div>
+      <ProductDetail product={product} />
     </>
   );
 };
 
-export default Products;
+export default ProductsDetails;

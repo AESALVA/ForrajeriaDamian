@@ -102,11 +102,8 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 0.5rem;
-    border: 2px solid #a7a7a7;
     color: #fff;
     margin: 1rem 2rem;
   }
