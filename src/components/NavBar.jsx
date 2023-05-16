@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/navbar.css';
 import Logo from '../assets/petShopLogo.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX, faCartShopping,faUsers, faEnvelope, faUser,faNewspaper,faHouse} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 
@@ -30,18 +30,19 @@ const NavBar = () => {
         <li><NavLink to='/'>Inicio</NavLink></li>
         <li><NavLink to='/products'>Productos</NavLink></li>
         <li><NavLink to='/contact'>Contacto</NavLink></li>
-        <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
+        <li><NavLink to='/cart'>Carrito</NavLink></li>
         <li><NavLink to='/login' >Iniciar Sesión</NavLink></li>
     </ul>
     <div className='barsMenu'>
     {menuResponsive==='NavListResponsive'?(<FontAwesomeIcon icon={faBars} onClick={handleMenu} />):(<FontAwesomeIcon icon={faX  } onClick={handleMenu} />)} 
     </div>
     <ul className={menuResponsive}>
-        <li><NavLink to='/'>Inicio</NavLink></li>
-        <li><NavLink to='/products' >Productos</NavLink></li>
-        <li><NavLink to='/contact'>Contacto</NavLink></li>
-        <li><NavLink to='/about'>Sobre Nosotros</NavLink></li>
-        <li><NavLink to='/login'>Iniciar Sesión</NavLink></li>  
+        <li><NavLink to='/'><FontAwesomeIcon icon={faHouse} />{' '}Inicio</NavLink></li>
+        <li><NavLink to='/products' ><FontAwesomeIcon icon={faNewspaper} />{' '}Productos</NavLink></li>
+        <li><NavLink to='/contact'><FontAwesomeIcon icon={faEnvelope} />{' '}Contacto</NavLink></li>
+        <li><NavLink to='/about'><FontAwesomeIcon icon={faUsers} />{' '}Sobre Nosotros</NavLink></li>
+        <li><NavLink to='/cart'><FontAwesomeIcon icon={faCartShopping} />{' '}Carrito</NavLink></li>
+        <li><NavLink to='/login'><FontAwesomeIcon icon={faUser} />{' '}Iniciar Sesión</NavLink></li>
     </ul>
 </div>
 </>
