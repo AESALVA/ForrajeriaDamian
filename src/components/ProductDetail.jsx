@@ -62,8 +62,6 @@ const ProductDetail = ({ product }) => {
         <div className="DetailCardMobile">
         <div className="CardDetail">
             <h1>{product.title}</h1>
-            <h3>{`Categoria: ${product.category}`}</h3>
-            <h3>{`Sabor: ${product.type}`}</h3>
             {product.subtitle ? (
               <>
                 <h3>{`Calidad: ${product.subtitle}`}</h3>
@@ -73,8 +71,7 @@ const ProductDetail = ({ product }) => {
                 <h3>Calidad: Regular</h3>
               </>
             )}
-            <p>Precio: $ {product.price}</p>
-            
+            <h3>Precio: $ {product.price}</h3>
           </div>
         <div className="DetailImg">
             <img src={product.img} alt="detalleArticulo" />
@@ -85,11 +82,13 @@ const ProductDetail = ({ product }) => {
                 <>Sin Stock</>
               )}
             </p>
+            <p>{`Categoria: ${product.category}`}{' '}{`Sabor: ${product.type}`}</p>
+            <h3></h3>
           </div>
           <div className="DetailFooterMobile">
           <div className="DetailBtn">
             <NavLink>Comprar</NavLink>
-            <NavLink><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir al carrito</NavLink>
+            <NavLink><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir</NavLink>
           </div>
         </div>
           <div className="Detalles">
