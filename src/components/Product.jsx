@@ -7,13 +7,15 @@ const Product = ({ product }) => {
     <>
       <div className="CardProduct">
         <h2>{product.title}</h2>
-        <h3>{product.type}</h3>
+        <p>{product.type}</p>
         <div className="ProductImg">
           <img src={product.img} alt="Product" />
         </div>
+        <div className="CardBottom">
         <NavLink to={`/producto/${product.id}`} className="ProductBtn">
           Ir al producto
         </NavLink>
+        </div>
       </div>
     </>
   );

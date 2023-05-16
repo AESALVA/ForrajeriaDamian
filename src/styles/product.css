@@ -4,14 +4,29 @@
     align-items: center;
     border: 2px solid #fff;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    background: linear-gradient(0deg, #000c04, #0c220c);
     color: #ffc918;
+    position: relative;
+    width: 20rem;
 }
+.CardProduct:hover .CardBottom{
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+}
+
+.CardProduct:hover .ProductImg >img{
+    scale: 1.15;
+    transition: scale 400ms ease-in-out;
+}
+
 .ProductImg{
     max-width: 12rem;
 }
 .ProductImg > img{
     width: 100%;
+    scale: 1;
+    transition: scale 400ms ease-in-out;
 }
 .ProductBtn{
     text-decoration: none;
@@ -38,3 +53,17 @@
     transform-origin: left;
     transform: scaleX(1);
 }
+
+.CardBottom{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    position: absolute;
+    top: 76%;
+    background: #000c04bb;
+    border-radius: 0 0 1rem 1rem;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+}
+
