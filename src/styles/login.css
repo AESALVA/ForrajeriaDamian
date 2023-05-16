@@ -55,7 +55,7 @@
   justify-content: space-between;
   align-items: start;
   padding: 1rem;
-  gap: 0.5rem;
+  gap: .5rem;
   width: 100%;
 }
 
@@ -134,10 +134,22 @@
 }
 
 @media (max-width: 800px) {
+.ContainerLogin{
+  min-height: 100%;
+}
   .CardLogin {
     padding: 2rem 1rem;
   }
   .FormLogin {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
+  .InputLogin{
+    padding: 0 1rem;
+    gap: .2rem;
+  }
+  .LoginRegister,
+.forgotpass {
+  padding:.5rem 0;
+  text-align: center;
+}
 }
