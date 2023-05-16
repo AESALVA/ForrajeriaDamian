@@ -130,9 +130,15 @@ gap: 3rem;
   flex-direction: column;
   align-items: center;
 }
+.DetailCardMobile h3{
+  margin: 0;
+}
 
 .CardDetail{
 align-items: center;
+}
+.CardDetail h1{
+  margin: 0;
 }
 .Detalles{
   width: 80%;
@@ -142,6 +148,8 @@ align-items: center;
 .DetailBtn{
   gap: 1rem;
 }
-
+.DetailImg{
+  padding: 0 1rem;
+}
 
 }
