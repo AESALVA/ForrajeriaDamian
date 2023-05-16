@@ -122,6 +122,7 @@
     transition: transform 400ms ease-in-out;
     transform-origin: top;
     background: linear-gradient(0deg, #000c04, #0c220c);
+    z-index: 1;
   }
 
   .NavListResponsiveShow {
@@ -139,6 +140,7 @@
     transition: transform 400ms ease-in-out;
     transform-origin: top;
     background: linear-gradient(0deg, #000c04, #0c220c);
+    z-index: 1;
   }
   .NavListResponsive a {
     opacity: 0;
