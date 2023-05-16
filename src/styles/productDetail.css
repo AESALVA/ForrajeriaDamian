@@ -113,3 +113,35 @@ gap: 3rem;
   opacity: 1;
   transition: opacity 350ms ease-in-out 250ms;
 }
+.DetailCardMobile{
+  display: none;
+}
+
+@media (max-width:750px){
+.DetailCard{
+  display: none;
+}
+.DetailFooter{
+  display: none;
+}
+
+.DetailCardMobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CardDetail{
+align-items: center;
+}
+.Detalles{
+  width: 80%;
+  margin: 0 0 7rem 0;
+
+}
+.DetailBtn{
+  gap: 1rem;
+}
+
+
+}
