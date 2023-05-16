@@ -109,8 +109,16 @@
 @media (max-width: 800px) {
   .CardRegister {
     padding: 2rem 1rem;
+    gap: 0;
+  }
+  .CardRegister h2 {
+    padding: 0.5rem;
+    margin: 0;
   }
   .FormRegister {
-    padding: 2rem 0;
+    padding: 0;
+  }
+  .InputRegister {
+    padding: 0.2rem 1rem;
   }
 }
