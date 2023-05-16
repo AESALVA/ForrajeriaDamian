@@ -150,6 +150,15 @@ align-items: center;
 }
 .DetailImg{
   padding: 0 1rem;
+  position: relative;
+}
+.BottomImgMobile{
+  background: #000c04bb;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
 }
 
 }

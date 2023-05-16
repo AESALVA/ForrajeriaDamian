@@ -75,6 +75,7 @@ const ProductDetail = ({ product }) => {
           </div>
         <div className="DetailImg">
             <img src={product.img} alt="detalleArticulo" />
+            <div className="BottomImgMobile">
             <p>
               {product.disponibility ? (
                 <>Producto Disponible</>
@@ -83,7 +84,7 @@ const ProductDetail = ({ product }) => {
               )}
             </p>
             <p>{`Categoria: ${product.category}`}{' '}{`Sabor: ${product.type}`}</p>
-            <h3></h3>
+            </div>
           </div>
           <div className="DetailFooterMobile">
           <div className="DetailBtn">
