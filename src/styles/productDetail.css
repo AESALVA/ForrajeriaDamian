@@ -147,6 +147,7 @@ align-items: center;
 }
 .DetailBtn{
   gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .DetailImg{
   padding: 0 1rem;
