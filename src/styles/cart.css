@@ -46,8 +46,29 @@ tbody td {
   gap: 1rem;
 }
 
+.CartBtn{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.CartBtn a{
+  text-decoration: none;
+  color: #ffc918;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #000c04, #0c220c);
+}
+.CartBtn a:hover{
+  color: #fff;
+}
+
 @media(max-width:750px){
     .Description{
         display: none;
+    }
+    .ScoreContainer{
+      justify-content: center;
     }
 }

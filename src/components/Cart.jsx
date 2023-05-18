@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/cart.css";
+import { NavLink } from "react-router-dom";
+
 
 const Cart = () => {
   const DATA = [
@@ -24,6 +26,27 @@ const Cart = () => {
       quantity: "5",
       price: 700,
     },
+    {
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: "1",
+      price: 1000,
+    },
+    {
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: "1",
+      price: 1000,
+    },
+    {
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: "1",
+      price: 1000,
+    },
   ];
   let TotalPrice = [];
 
@@ -35,7 +58,6 @@ const Cart = () => {
     return total + num;
   };
   const PriceTotal = TotalPrice.reduce(Total);
-
 
   return (
     <div className="ContainerCart">
@@ -64,8 +86,12 @@ const Cart = () => {
         <div className="ScoreContainer">
           <div className="Score">
             <span>Subtotal: ${PriceTotal}</span>
-          <h2>TOTAL: ${PriceTotal}</h2>
+            <h2>TOTAL: ${PriceTotal}</h2>
           </div>
+        </div>
+        <div className="CartBtn">
+          <NavLink>Finalizar Compra</NavLink>
+          <NavLink>Seguir Comprando</NavLink>
         </div>
       </div>
     </div>
