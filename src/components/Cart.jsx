@@ -167,7 +167,7 @@ const Cart = () => {
           <thead>
             <tr>
               <th>Articulo</th>
-              <th className="Description">Descripción</th>
+              <th className="Descrip">Descripción</th>
               <th>Cantidad</th>
               <th>Precio</th>
             </tr>
@@ -176,7 +176,7 @@ const Cart = () => {
             {DATA.map((articulo, i) => (
               <tr key={i}>
                 <td>{articulo.name}</td>
-                <td className="Description">{articulo.description}</td>
+                <td className="Descrip">{articulo.description}</td>
                 <td className="UpDownContainer">
                   {articulo.quantity}
                   <span className="UpDown">

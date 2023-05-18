@@ -79,7 +79,7 @@ tbody td {
 }
 
 @media(max-width:750px){
-    .Description{
+    .Descrip{
         display: none;
     }
     .ScoreContainer{
