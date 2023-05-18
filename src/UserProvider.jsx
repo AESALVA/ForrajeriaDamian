@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
 
 const userContext = React.createContext();
@@ -25,6 +25,8 @@ const UserProvider = ({ children }) => {
   const [auth, setAuth] = useState({ name: "", role: "" });
 
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const [data, setData] = useState([]);
 
   const validatePassword = (n = "hol") => {
     return (
@@ -143,6 +145,62 @@ const UserProvider = ({ children }) => {
     }).finally(() => setIsLoaded(false));
   };
 
+  const LISTA = [
+    {
+      id: "1",
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: 1,
+      price: 1000,
+    },
+    {
+      id: "2",
+      name: "Royal",
+      description:
+        "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
+      quantity: 1,
+      price: 500,
+    },
+    {
+      id: "3",
+      name: "Old Prince",
+      description:
+        "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
+      quantity: 1,
+      price: 700,
+    },
+    {
+      id: "4",
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: 1,
+      price: 1000,
+    },
+    {
+      id: "5",
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: 1,
+      price: 1041,
+    },
+    {
+      id: "6",
+      name: "Golden",
+      description:
+        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+      quantity: 1,
+      price: 1540,
+    },
+  ];
+
+  useEffect(() => {
+setData(LISTA)
+  }, [])
+  
+
   return (
     <userContext.Provider value={{ auth, setAuth, addUser, login, logout }}>
       <LoadedContext.Provider value={{ isLoaded, setIsLoaded }}>
@@ -156,7 +214,7 @@ const UserProvider = ({ children }) => {
             validateText,
           }}
         >
-          <articlesContext.Provider>
+          <articlesContext.Provider value={{data,setData}}>
             {children}
           </articlesContext.Provider>
         </ValidationContext.Provider>
