@@ -13,14 +13,37 @@ import Form from "react-bootstrap/Form";
 
 const Managment = () => {
   const Articles = useArticlesContext();
+
   const [show, setShow] = useState(false);
-  const [articulo, setArticulo] = useState("");
+
+  const [id,setId]=useState('');
+  const [article, setArticle] = useState("");
   const [description, setDescription] = useState("");
   const [stock, setStock] = useState("");
   const [price, setPrice] = useState("");
+  const [disp, setDisp]=useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = (id) => {setShow(true);console.log(id)};
+  const handleShow = (articulo) => {setShow(true);
+    setArticle(articulo.name);
+    setDescription(articulo.description);
+    setStock(articulo.quantity);
+    setPrice(articulo.price);
+    setDisp(articulo.disponibility);
+    setId(articulo.id);
+  };
+
+  let Art = {}
+
+  const SaveChanges = ()=>{
+    Art = {id:id,name:article,description:description,quantity:stock,price:price,disponibility:disp}
+    Articles.data.map((art,i)=>{if(art.id===Art.id){
+      art = Art;
+      Articles.data[i]=Art;
+    }});
+ 
+  }
+
 
   return (
     <div className="ContainerManagment">
@@ -47,7 +70,7 @@ const Managment = () => {
                 <td>{articulo.price}</td>
                 <td>{articulo.disponibility?(<>SI</>):(<>NO</>)}</td>
                 <td>
-                  <NavLink onClick={()=>handleShow(articulo.id)}>Editar</NavLink>
+                  <NavLink onClick={()=>handleShow(articulo)}>Editar</NavLink>
                 </td>
                 <td>
                   <NavLink>Eliminar</NavLink>
@@ -70,30 +93,33 @@ const Managment = () => {
         <Modal.Body>
           <div className="Input">
             <label>Nombre</label>
-            <input type="text" />
+            <input type="text" value={article} onChange={(e)=>setArticle(e.target.value)} />
           </div>
           <div className="Input">
             <label>Descripción</label>
-            <input type="text" />
+            <input type="text"  value={description} onChange={(e)=>setDescription(e.target.value)} />
           </div>
           <div className="Input">
             <label>Cantidad en Stock</label>
-            <input type="text" />
+            <input type="text"  value={stock} onChange={(e)=>setStock(e.target.value)}/>
           </div>
           <div className="Input">
             <label>Precio</label>
-            <input type="text" />
+            <input type="text"  value={price} onChange={(e)=>setPrice(e.target.value)} />
           </div>
           <div className="Input">
             <label>Disponibilidad</label>
-            <Form.Check id="default" label="Disponible en Stock" />
+          <div className="Checkbox">
+          <input type="checkbox" value={disp} checked={disp} onChange={()=>setDisp(!disp)} />
+            <span>Hay Stock</span>
+          </div>
           </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="secondary">Guardar cambios</Button>
+          <Button variant="secondary" onClick={SaveChanges}>Guardar cambios</Button>  
         </Modal.Footer>
       </Modal>
     </div>
