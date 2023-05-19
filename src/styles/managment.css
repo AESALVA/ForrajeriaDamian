@@ -16,4 +16,10 @@
   align-items: center;
   gap: 1rem;
 }
-
+.Btns{
+  text-decoration: none;
+  color: #ffc918;
+}
+.Btns:hover{
+  color: #fff;
+}

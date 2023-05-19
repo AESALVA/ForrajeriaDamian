@@ -13,6 +13,7 @@ import Form from "react-bootstrap/Form";
 
 const Managment = () => {
   const Articles = useArticlesContext();
+  const Load = useLoadedContext();
 
   const [show, setShow] = useState(false);
 
@@ -41,8 +42,14 @@ const Managment = () => {
       art = Art;
       Articles.data[i]=Art;
     }});
- 
   }
+const Delete = (articulo)=>{
+Articles.data.map((art,i)=>{
+ if(articulo.id===art.id){
+  Articles.data.splice(i,1)
+ } 
+})
+}
 
 
   return (
@@ -70,10 +77,10 @@ const Managment = () => {
                 <td>{articulo.price}</td>
                 <td>{articulo.disponibility?(<>SI</>):(<>NO</>)}</td>
                 <td>
-                  <NavLink onClick={()=>handleShow(articulo)}>Editar</NavLink>
+                  <NavLink className='Btns' onClick={()=>handleShow(articulo)}>Editar</NavLink>
                 </td>
                 <td>
-                  <NavLink>Eliminar</NavLink>
+                  <NavLink className='Btns text-danger' onClick={()=>Delete(articulo)} >Eliminar</NavLink>
                 </td>
               </tr>
             ))}
