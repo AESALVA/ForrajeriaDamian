@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/productDetail.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  useUserContext,
+  useLoadedContext,
+  useValidationContext,
+  useArticlesContext,
+} from "../UserProvider";
 
 const ProductDetail = ({ product }) => {
+  const Articles = useArticlesContext();
+
   const [showDetailOn, setShowDetailOn] = useState("ShowDetail");
 
   const ShowDetail = () => {
@@ -15,6 +23,10 @@ const ProductDetail = ({ product }) => {
     }
   };
   
+  const AddCart = ()=>{
+  Articles.setCart([...Articles.cart,product]);
+  }
+
 
   return (
     <div className="DetailContainer">
@@ -57,7 +69,7 @@ const ProductDetail = ({ product }) => {
         <div className="DetailFooter">
           <div className="DetailBtn">
             <NavLink>Comprar</NavLink>
-            <NavLink><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir al carrito</NavLink>
+            <NavLink onClick={()=>AddCart()}><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir al carrito</NavLink>
           </div>
         </div>
         <div className="DetailCardMobile">

@@ -3,157 +3,166 @@ import "../styles/cart.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  useUserContext,
+  useLoadedContext,
+  useValidationContext,
+  useArticlesContext,
+} from "../UserProvider";
 
 const Cart = () => {
-  const Listado = [
-    {
-      id: "1",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "2",
-      name: "Royal",
-      description:
-        "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
-      quantity: 2,
-      price: 500,
-    },
-    {
-      id: "3",
-      name: "Old Prince",
-      description:
-        "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
-      quantity: 5,
-      price: 700,
-    },
-    {
-      id: "4",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "5",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "6",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-  ];
+  const Articles = useArticlesContext();
 
-  const [DATA, setDATA] = useState([
-    {
-      id: "1",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "2",
-      name: "Royal",
-      description:
-        "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
-      quantity: 2,
-      price: 500,
-    },
-    {
-      id: "3",
-      name: "Old Prince",
-      description:
-        "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
-      quantity: 5,
-      price: 700,
-    },
-    {
-      id: "4",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "5",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-    {
-      id: "6",
-      name: "Golden",
-      description:
-        "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
-      quantity: 1,
-      price: 1000,
-    },
-  ]);
+  // const Listado = [
+  //   {
+  //     id: "1",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "2",
+  //     name: "Royal",
+  //     description:
+  //       "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
+  //     quantity: 2,
+  //     price: 500,
+  //   },
+  //   {
+  //     id: "3",
+  //     name: "Old Prince",
+  //     description:
+  //       "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
+  //     quantity: 5,
+  //     price: 700,
+  //   },
+  //   {
+  //     id: "4",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "5",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "6",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  // ];
+
+  // const [DATA, setDATA] = useState([
+  //   {
+  //     id: "1",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "2",
+  //     name: "Royal",
+  //     description:
+  //       "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
+  //     quantity: 2,
+  //     price: 500,
+  //   },
+  //   {
+  //     id: "3",
+  //     name: "Old Prince",
+  //     description:
+  //       "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
+  //     quantity: 5,
+  //     price: 700,
+  //   },
+  //   {
+  //     id: "4",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "5",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  //   {
+  //     id: "6",
+  //     name: "Golden",
+  //     description:
+  //       "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+  //     quantity: 1,
+  //     price: 1000,
+  //   },
+  // ]);
 
   let TotalPrice = [];
 
-  DATA.map((art) => {
+  Articles.cart.map((art) => {
     TotalPrice.push(art.price);
   });
 
   const Total = (total, num) => {
     return total + num;
   };
+
   const PriceTotal = TotalPrice.reduce(Total);
 
   const Up = (id) => {
-    const Prod = DATA.find((art) => art.id === id);
+    const Prod = Articles.data.find((art) => art.id === id);
     Prod.quantity += 1;
     let price = 0;
-    Listado.map((art) => {
+    Articles.LISTA.map((art) => {
       if (art.id === id) {
         price = Prod.quantity * art.price;
       }
     });
 
-    const aux = [...DATA];
+    const aux = [...Articles.data];
     aux.map((art) => {
       if (art.id === id) {
         art.quantity = Prod.quantity;
         art.price = price;
-        setDATA(aux);
+        Articles.setData(aux);
       }
     });
   };
 
   const Down = (id) => {
-    const Prod = DATA.find((art) => art.id === id);
+    const Prod = Articles.data.find((art) => art.id === id);
     if (Prod.quantity > 1) {
       Prod.quantity -= 1;
       let price = 0;
-      Listado.map((art) => {
+      Articles.LISTA.map((art) => {
         if (art.id === id) {
           price = Prod.quantity * art.price;
         }
       });
-      const aux = [...DATA];
+      const aux = [...Articles.data];
       aux.map((art) => {
         if (art.id === id) {
           art.quantity = Prod.quantity;
           art.price = price;
-          setDATA(aux);
+          Articles.setData(aux);
         }
       });
     }
@@ -173,7 +182,7 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {DATA.map((articulo, i) => (
+            { Articles.cart?(<>{ Articles.cart.map((articulo, i) => (
               <tr key={i}>
                 <td>{articulo.name}</td>
                 <td className="Descrip">{articulo.description}</td>
@@ -194,7 +203,7 @@ const Cart = () => {
                 </td>
                 <td>{articulo.price}</td>
               </tr>
-            ))}
+            ))}</>):(<tr><td><h2>Su carrito esta vacio</h2></td></tr>)            }
           </tbody>
         </table>
         <div className="ScoreContainer">
