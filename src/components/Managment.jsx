@@ -23,9 +23,14 @@ const Managment = () => {
   const [id, setId] = useState("");
   const [article, setArticle] = useState("");
   const [description, setDescription] = useState("");
+  const [img, setImg]= useState('');
   const [stock, setStock] = useState("");
   const [price, setPrice] = useState("");
   const [disp, setDisp] = useState(false);
+  const [title, setTitle]=useState('');
+  const [category, setCategory]=useState('');
+  const [subcategory, setSubcategory]=useState('');
+  const [type, setType]=useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = (articulo) => {
@@ -36,6 +41,11 @@ const Managment = () => {
     setPrice(articulo.price);
     setDisp(articulo.disponibility);
     setId(articulo.id);
+    setImg(articulo.img);
+    setTitle(articulo.title);
+    setCategory(articulo.category);
+    setSubcategory(articulo.subcategory);
+    setType(articulo.type);
   };
 
   let Art = {};
@@ -45,9 +55,14 @@ const Managment = () => {
       id: id,
       name: article,
       description: description,
+      title:title,
+      category:category,
+      subcategory:subcategory,
+      type:type,
       quantity: stock,
       price: price,
       disponibility: disp,
+      img:img
     };
     Articles.data.map((art, i) => {
       if (art.id === Art.id) {

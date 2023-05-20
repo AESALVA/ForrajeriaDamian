@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
+import ProductImg from './assets/productimg.png';
 
 const userContext = React.createContext();
 const LoadedContext = React.createContext();
@@ -149,50 +150,80 @@ const UserProvider = ({ children }) => {
     {
       id: "1",
       name: "Golden",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
+      img:ProductImg,
     },
     {
       id: "2",
       name: "Royal",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
       quantity: 1,
       price: 500,
+      img:ProductImg,
     },
     {
       id: "3",
       name: "Old Prince",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
       quantity: 1,
       price: 700,
+      img:ProductImg,
     },
     {
       id: "4",
       name: "Golden",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
+      img:ProductImg,
     },
     {
       id: "5",
       name: "Golden",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1041,
+      img:ProductImg,
     },
     {
       id: "6",
       name: "Golden",
+      title: "Old Prince",
+      category: "Perro",
+      subcategory: "Adulto",
+      type: "Pollo y Carne",
       description:
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1540,
+      img:ProductImg,
     },
   ];
 

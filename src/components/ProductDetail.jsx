@@ -14,6 +14,7 @@ const ProductDetail = ({ product }) => {
       setShowDetailOn("ShowDetail");
     }
   };
+  
 
   return (
     <div className="DetailContainer">
