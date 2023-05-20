@@ -4,9 +4,17 @@ import Logo from '../assets/petShopLogo.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX, faCartShopping,faUsers, faEnvelope, faUser,faNewspaper,faHouse} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import {
+    useUserContext,
+    useLoadedContext,
+    useValidationContext,
+    useArticlesContext,
+  } from "../UserProvider";
 
 
 const NavBar = () => {
+    const Articles = useArticlesContext();
+
 
     const [menuResponsive, setMenuResponsive] = useState("NavListResponsive");
     const handleMenu = () => {
@@ -30,7 +38,7 @@ const NavBar = () => {
         <li><NavLink to='/'>Inicio</NavLink></li>
         <li><NavLink to='/products'>Productos</NavLink></li>
         <li><NavLink to='/contact'>Contacto</NavLink></li>
-        <li><NavLink to='/cart'>Carrito</NavLink></li>
+        <li><NavLink to='/cart'>Carrito{Articles.cart[0]&&(<><span className='CartSpan'>{Articles.cart.length}</span></>)}</NavLink></li>
         <li><NavLink to='/login' >Iniciar Sesión</NavLink></li>
     </ul>
     <div className='barsMenu'>

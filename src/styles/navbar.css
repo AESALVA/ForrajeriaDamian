@@ -19,7 +19,7 @@
 .navbar a {
   text-decoration: none;
   color: #fff;
-  position: relative;
+  position: relative; 
 }
 .navbar a:hover {
   color: #fff;
@@ -78,6 +78,15 @@
 .NavListResponsive a {
   text-decoration: none;
   color: #fff;
+}
+.CartSpan{
+  color: #fff;
+  background: red;
+  padding: .2rem;
+  position: absolute;
+  top: -150%;
+  right: -25%;
+  height: 1.7rem;
 }
 
 @media (max-width: 1155px) {
