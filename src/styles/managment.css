@@ -5,6 +5,10 @@
   color: #fff;
   padding: 1rem;
 }
+.Managment h1{
+  text-align: center;
+  padding: 1rem;
+}
 .Input {
   display: flex;
   flex-direction: column;
@@ -22,4 +26,10 @@
 }
 .Btns:hover{
   color: #fff;
+}
+
+@media (max-width:800px){
+  .DescripManagment{
+    display: none;
+  }
 }

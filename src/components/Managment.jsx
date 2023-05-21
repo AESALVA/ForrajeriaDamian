@@ -94,22 +94,22 @@ const Managment = () => {
           <thead>
             <tr>
               <th>Articulo</th>
-              <th>Descripción</th>
-              <th>Cantidad</th>
+              <th className="DescripManagment">Descripción</th>
+              <th className="DescripManagment">Cantidad</th>
               <th>Precio</th>
-              <th>En Stock</th>
+              <th className="DescripManagment">En Stock</th>
               <th>Editar</th>
               <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
-            {Articles.data.map((articulo, i) => (
+            {Articles.LISTA.map((articulo, i) => (
               <tr key={i}>
                 <td>{articulo.name}</td>
-                <td>{articulo.description}</td>
-                <td>{articulo.quantity}</td>
+                <td className="DescripManagment">{articulo.description}</td>
+                <td className="DescripManagment">{articulo.quantity}</td>
                 <td>{articulo.price}</td>
-                <td>{articulo.disponibility ? <>SI</> : <>NO</>}</td>
+                <td className="DescripManagment">{articulo.disponibility ? <>SI</> : <>NO</>}</td>
                 <td>
                   <NavLink
                     className="Btns"
