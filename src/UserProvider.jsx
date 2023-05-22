@@ -198,7 +198,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'./assets/productimg.png',
+      img:'productimg.png',
     },
     {
       id: "5",
@@ -211,7 +211,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1041,
-      img:'./assets/productimg.png',
+      img:'/assets/productimg.png',
     },
     {
       id: "6",
@@ -224,7 +224,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1540,
-      img:'./assets/productimg.png',
+      img:'assets/productimg.png',
     },
   ];
 
