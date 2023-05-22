@@ -160,7 +160,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'../assets/productImg.png',
+      img:img,
     },
     {
       id: "2",
@@ -173,7 +173,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
       quantity: 1,
       price: 500,
-      img:'/src/assets/productImg.png',
+      img:img,
     },
     {
       id: "3",
@@ -186,7 +186,7 @@ const UserProvider = ({ children }) => {
         "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
       quantity: 1,
       price: 700,
-      img:'/src/assets/productImg.png',
+      img:img,
     },
     {
       id: "4",
@@ -199,7 +199,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'/src/assets/productImg.png',
+      img:img,
     },
     {
       id: "5",
@@ -212,7 +212,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1041,
-      img:"/src/assets/productImg.png",
+      img:img,
     },
     {
       id: "6",
