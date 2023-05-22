@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/navbar.css';
 import Logo from '../assets/petShopLogo.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX, faCartShopping,faUsers, faEnvelope, faUser,faNewspaper,faHouse} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX, faCartShopping,faUsers, faEnvelope, faUser,faNewspaper,faHouse, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import {
     useUserContext,
@@ -49,7 +49,7 @@ const NavBar = () => {
         <li><NavLink to='/products' ><FontAwesomeIcon icon={faNewspaper} />{' '}Productos</NavLink></li>
         <li><NavLink to='/contact'><FontAwesomeIcon icon={faEnvelope} />{' '}Contacto</NavLink></li>
         <li><NavLink to='/about'><FontAwesomeIcon icon={faUsers} />{' '}Sobre Nosotros</NavLink></li>
-        <li><NavLink to='/cart'><FontAwesomeIcon icon={faCartShopping} />{' '}Carrito</NavLink></li>
+        <li><NavLink to='/cart'><FontAwesomeIcon icon={faShoppingCart} />{' '}Carrito{Articles.cart[0]&&(<><span className='CartSpan'>{Articles.cart.length}</span></>)}</NavLink></li>
         <li><NavLink to='/login'><FontAwesomeIcon icon={faUser} />{' '}Iniciar Sesión</NavLink></li>
     </ul>
 </div>

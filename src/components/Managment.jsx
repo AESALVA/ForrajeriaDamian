@@ -66,7 +66,6 @@ const Managment = () => {
     };
     Articles.data.map((art, i) => {
       if (art.id === Art.id) {
-        art = Art;
         Articles.data[i] = Art;
       }
     });
@@ -103,7 +102,7 @@ const Managment = () => {
             </tr>
           </thead>
           <tbody>
-            {Articles.LISTA.map((articulo, i) => (
+            {Articles.data.map((articulo, i) => (
               <tr key={i}>
                 <td>{articulo.name}</td>
                 <td className="DescripManagment">{articulo.description}</td>
@@ -179,8 +178,8 @@ const Managment = () => {
             <div className="Checkbox">
               <input
                 type="checkbox"
-                value={disp}
-                checked={disp}
+                value={disp || ''}
+                checked={disp || ''}
                 onChange={() => setDisp(!disp)}
               />
               <span>Hay Stock</span>

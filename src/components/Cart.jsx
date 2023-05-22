@@ -112,7 +112,7 @@ const Cart = () => {
         </div>
         <div className="CartBtn">
           <NavLink>Finalizar Compra</NavLink>
-          <NavLink>Seguir Comprando</NavLink>
+          <NavLink to="/products">Seguir Comprando</NavLink>
         </div>
       </div>
     </div>
