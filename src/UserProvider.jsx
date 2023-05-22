@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
+import img from './assets/productImg.png';
 
 const userContext = React.createContext();
 const LoadedContext = React.createContext();
@@ -159,7 +160,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'./src/assets/productimg.png',
+      img:'../assets/productImg.png',
     },
     {
       id: "2",
@@ -172,7 +173,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
       quantity: 1,
       price: 500,
-      img:'/src/assets/productimg.png',
+      img:'/src/assets/productImg.png',
     },
     {
       id: "3",
@@ -185,7 +186,7 @@ const UserProvider = ({ children }) => {
         "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
       quantity: 1,
       price: 700,
-      img:'/src/assets/productimg.png',
+      img:'/src/assets/productImg.png',
     },
     {
       id: "4",
@@ -198,7 +199,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'/src/assets/productimg.png',
+      img:'/src/assets/productImg.png',
     },
     {
       id: "5",
@@ -211,7 +212,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1041,
-      img:"/src/assets/productimg.png",
+      img:"/src/assets/productImg.png",
     },
     {
       id: "6",
@@ -224,7 +225,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1540,
-      img:'/src/assets/productimg.png',
+      img:img,
     },
   ];
 
