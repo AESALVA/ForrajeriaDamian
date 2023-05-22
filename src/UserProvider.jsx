@@ -159,7 +159,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:'/src/assets/productimg.png',
+      img:'../src/assets/productimg.png',
     },
     {
       id: "2",
