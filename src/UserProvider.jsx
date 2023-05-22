@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
-import ProductImg from './assets/productimg.png';
 
 const userContext = React.createContext();
 const LoadedContext = React.createContext();
