@@ -93,7 +93,7 @@ const UserProvider = ({ children }) => {
   };
 
   const validateLogin = async (u, p) => {
-    await fetch("https://babyshowerback.vercel.app/Users/login", {
+    await fetch("https://forrajeria-back-end.vercel.app/users/login", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -113,7 +113,7 @@ const UserProvider = ({ children }) => {
   };
 
   const login = async (u, p) => {
-    await fetch("https://babyshowerback.vercel.app/Users/login", {
+    await fetch("https://forrajeria-back-end.vercel.app/users/login", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -136,7 +136,7 @@ const UserProvider = ({ children }) => {
   };
 
   const addUser = (u) => {
-    fetch("https://babyshowerback.vercel.app/Users/register", {
+    fetch("https://forrajeria-back-end.vercel.app/users/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

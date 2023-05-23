@@ -123,6 +123,7 @@
   position: absolute;
   right:10%;
   top: 52%;
+  cursor: pointer;
 }
 
 @media (max-width: 1450px) {
