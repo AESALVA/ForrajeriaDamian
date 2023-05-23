@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/navbar.css";
 import Logo from "../assets/petShopLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBars,faX,faCartShopping,faUsers,faEnvelope,faUser,faNewspaper,faHouse,faShoppingCart,} from "@fortawesome/free-solid-svg-icons";
+import {faBars,faX,faUsers,faEnvelope,faUser,faNewspaper,faHouse,faShoppingCart,} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import {useUserContext,useLoadedContext,useValidationContext,useArticlesContext,} from "../UserProvider";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
