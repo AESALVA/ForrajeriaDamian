@@ -15,7 +15,9 @@
   gap: 3rem;
   margin: 0;
 }
-
+.navbar .Username{ 
+  color:#ffc918 ;
+}
 .navbar a {
   text-decoration: none;
   color: #fff;
@@ -89,6 +91,7 @@
   height: 1.7rem;
   border-radius: .1rem;
 }
+
 
 @media (max-width: 1155px) {
   .navbar {
