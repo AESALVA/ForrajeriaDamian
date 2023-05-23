@@ -57,6 +57,7 @@
   padding: 1rem;
   gap: .5rem;
   width: 100%;
+  position: relative;
 }
 
 .InputLogin > input {
@@ -117,6 +118,11 @@
 .LoginBtn:hover::after {
   transform-origin: left;
   transform: scaleX(1);
+}
+.Eye{
+  position: absolute;
+  right:10%;
+  top: 52%;
 }
 
 @media (max-width: 1450px) {
