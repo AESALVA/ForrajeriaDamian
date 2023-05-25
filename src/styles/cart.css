@@ -77,6 +77,13 @@ tbody td {
 .Btn{
   background: linear-gradient(180deg, #000c04, #0c220c);
 }
+.DelProduct{
+  color: #ffc918;;
+  text-decoration: none;
+}
+.DelProduct:hover{
+  color: red;
+}
 
 @media(max-width:750px){
     .Descrip{

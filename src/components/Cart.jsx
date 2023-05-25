@@ -77,10 +77,11 @@ const Cart = () => {
               <th className="Descrip">Descripción</th>
               <th>Cantidad</th>
               <th>Precio</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            { Articles.cart?(<>{ Articles.cart.map((articulo, i) => (
+            { Articles.cart[0]?(<>{ Articles.cart.map((articulo, i) => (
               <tr key={i}>
                 <td>{articulo.name}</td>
                 <td className="Descrip">{articulo.description}</td>
@@ -100,10 +101,12 @@ const Cart = () => {
                   </span>
                 </td>
                 <td>{articulo.price}</td>
+                <td><NavLink className='DelProduct'>X</NavLink></td>
               </tr>
-            ))}</>):(<tr><td><h2>Su carrito esta vacio</h2></td></tr>)            }
+            ))}</>):(<></>)}
           </tbody>
         </table>
+        {!Articles.cart[0]&&(<><h2>Su carrito está vacío</h2></>)}
         <div className="ScoreContainer">
           <div className="Score">
             <span>Subtotal: ${PriceTotal}</span>
@@ -113,6 +116,7 @@ const Cart = () => {
         <div className="CartBtn">
           <NavLink>Finalizar Compra</NavLink>
           <NavLink to="/products">Seguir Comprando</NavLink>
+          <NavLink>Limpiar Carrito</NavLink>
         </div>
       </div>
     </div>
