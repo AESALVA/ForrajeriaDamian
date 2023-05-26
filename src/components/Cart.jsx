@@ -66,6 +66,13 @@ const Cart = () => {
     }
   };
 
+  const DelProduct = (id) => {
+    Articles.setCart(Articles.cart.filter((d) => d.id !== id));
+  };
+  const ClearCart = () => {
+    Articles.setCart([]);
+  };
+
   return (
     <div className="ContainerCart">
       <div className="Cart">
@@ -81,32 +88,49 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            { Articles.cart[0]?(<>{ Articles.cart.map((articulo, i) => (
-              <tr key={i}>
-                <td>{articulo.name}</td>
-                <td className="Descrip">{articulo.description}</td>
-                <td className="UpDownContainer">
-                  {articulo.quantity}
-                  <span className="UpDown">
-                    <FontAwesomeIcon
-                      className="Btn"
-                      onClick={() => Up(articulo.id)}
-                      icon={faChevronUp}
-                    />
-                    <FontAwesomeIcon
-                      onClick={() => Down(articulo.id)}
-                      className="Btn"
-                      icon={faChevronDown}
-                    />
-                  </span>
-                </td>
-                <td>{articulo.price}</td>
-                <td><NavLink className='DelProduct'>X</NavLink></td>
-              </tr>
-            ))}</>):(<></>)}
+            {Articles.cart[0] ? (
+              <>
+                {Articles.cart.map((articulo, i) => (
+                  <tr key={i}>
+                    <td>{articulo.name}</td>
+                    <td className="Descrip">{articulo.description}</td>
+                    <td className="UpDownContainer">
+                      {articulo.quantity}
+                      <span className="UpDown">
+                        <FontAwesomeIcon
+                          className="Btn"
+                          onClick={() => Up(articulo.id)}
+                          icon={faChevronUp}
+                        />
+                        <FontAwesomeIcon
+                          onClick={() => Down(articulo.id)}
+                          className="Btn"
+                          icon={faChevronDown}
+                        />
+                      </span>
+                    </td>
+                    <td>{articulo.price}</td>
+                    <td>
+                      <NavLink
+                        onClick={() => DelProduct(articulo.id)}
+                        className="DelProduct"
+                      >
+                        X
+                      </NavLink>
+                    </td>
+                  </tr>
+                ))}
+              </>
+            ) : (
+              <></>
+            )}
           </tbody>
         </table>
-        {!Articles.cart[0]&&(<><h2>Su carrito está vacío</h2></>)}
+        {!Articles.cart[0] && (
+          <>
+            <h2>Su carrito está vacío</h2>
+          </>
+        )}
         <div className="ScoreContainer">
           <div className="Score">
             <span>Subtotal: ${PriceTotal}</span>
@@ -116,7 +140,7 @@ const Cart = () => {
         <div className="CartBtn">
           <NavLink>Finalizar Compra</NavLink>
           <NavLink to="/products">Seguir Comprando</NavLink>
-          <NavLink>Limpiar Carrito</NavLink>
+          <NavLink onClick={() => ClearCart()}>Limpiar Carrito</NavLink>
         </div>
       </div>
     </div>
