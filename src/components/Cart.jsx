@@ -138,7 +138,7 @@ const Cart = () => {
           </div>
         </div>
         <div className="CartBtn">
-          <NavLink>Finalizar Compra</NavLink>
+          <NavLink to={Articles.cart[0]&&'/checkout'}>Finalizar Compra</NavLink>
           <NavLink to="/products">Seguir Comprando</NavLink>
           <NavLink onClick={() => ClearCart()}>Limpiar Carrito</NavLink>
         </div>
