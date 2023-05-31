@@ -23,10 +23,10 @@ const Contact = () => {
           en contacto con nosotros. Estamos aquí para ayudarte y brindarte el
           mejor servicio posible.
         </p>
-        <p>
+        <h4>
           Puedes comunicarte con nuestro equipo de atención al cliente de varias
           maneras:
-        </p>
+        </h4>
         <div className="ContactWays">
           <ul>
             <li>
@@ -68,7 +68,7 @@ const Contact = () => {
                 electrónicos y se esfuerza por responder en un plazo de 24
                 horas.
               </span>
-              <span>Damian@TiendaDeMascotas.com</span>
+              <span>Damian@TiendaMascotas.com</span>
             </li>
           </ul>
         </div>
@@ -84,16 +84,20 @@ const Contact = () => {
           <div className="Inputs">
             <div className="InputContact">
               <label>Nombre</label>
-              <input type="text" />
+              <input className="bg-dark" type="text" />
             </div>
             <div className="InputContact">
               <label>Email</label>
-              <input type="mail" />
+              <input className="bg-dark" type="mail" />
             </div>
           </div>
           <div className="TextArea">
-            <textarea name="" id=""></textarea>
+            <textarea className="bg-dark" name="" id=""></textarea>
           </div>
+          <div className="BtnContainer">
+          <NavLink>Enviar</NavLink>
+          </div>
+          
         </form>
       </div>
       <div className="FooterContact mt-auto">
