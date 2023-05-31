@@ -102,7 +102,7 @@ const ProductDetail = ({ product }) => {
           <div className="DetailFooterMobile">
           <div className="DetailBtn">
             <NavLink>Comprar</NavLink>
-            <NavLink><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir</NavLink>
+            <NavLink onClick={()=>AddCart()}><FontAwesomeIcon icon={faCartShopping} />{' '}Añadir</NavLink>
           </div>
         </div>
           <div className="Detalles">
