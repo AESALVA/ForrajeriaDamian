@@ -14,7 +14,7 @@ const Contact = () => {
     <div className="ContainerContact">
       <div className="Contact">
         <h2>¡Contáctanos!</h2>
-        <p>
+        <p className="Text">
           ¡Estamos emocionados de escuchar de ti! En la Tienda de Mascotas Odi,
           nos apasiona proporcionar alimentos de alta calidad para perros y
           gatos, asegurando una nutrición óptima para tus adorables compañeros
@@ -101,7 +101,7 @@ const Contact = () => {
         </form>
       </div>
       <div className="FooterContact mt-auto">
-        <p>
+        <p className="Text">
           No importa cómo elijas contactarnos, te aseguramos que recibirás una
           respuesta personalizada y amigable. Valoramos tus comentarios y
           estamos comprometidos en brindarte una excelente experiencia de compra

@@ -17,6 +17,16 @@
 p {
   padding: 1rem;
 }
+.Contact h4{
+  padding: 2rem;
+}
+.Text{
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 90rem;
+  margin: auto;
+}
 .ContactWays ul {
   display: flex;
   flex-wrap: wrap;
