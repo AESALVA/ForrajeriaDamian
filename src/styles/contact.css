@@ -108,10 +108,12 @@ textarea {
   padding: 1rem;
   color: #fff;
 }
-.BtnContainer {
-  padding: 3rem;
+.BtnContact{
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
 }
-.BtnContainer a {
+.BtnContainer{
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   color: #ffc918;
@@ -119,6 +121,6 @@ textarea {
   border: 2px solid #151515;
   background: linear-gradient(0deg, #000c04, #0c220c);
 }
-.BtnContainer a:hover {
+.BtnContainer:hover {
   color: #fff;
 }

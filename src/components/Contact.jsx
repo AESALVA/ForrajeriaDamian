@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,9 +7,61 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopesBulk, faHashtag } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import {
+  useUserContext,
+  useLoadedContext,
+  useValidationContext,
+} from "../UserProvider";
+import Loader from "./Loader";
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
+  const auth = useUserContext();
+  const navigate = useNavigate();
+  const Load = useLoadedContext();
+  const Validation = useValidationContext();
+  const form = useRef();
+
+
+  const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [text, setText] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [firstName, setFirstName] = useState(true);
+  const [firstMail, setFirstMail] = useState(true);
+  const [firstText, setFirstText] = useState(true);
+
+  const HandleClick = () => {
+    Load.setIsLoaded(true);
+    if (
+      Validation.validateName(name) &&
+      Validation.validateMail(mail) &&
+      Validation.validateText(text)
+    ) {
+      emailjs.sendForm(
+        "service_6te7sr6",
+        "template_x3rxlzp",
+        form.current,
+        "ugkrjxlh9YCbw85u7"
+      );
+      Load.setIsLoaded(false);
+    } else {
+      setMessage("Debe completar correctamente el formulario");
+      Load.setIsLoaded(false);
+    }
+  };
+
+
+  useEffect(() => {
+  if(Validation.validateText(text)){
+    setFirstText(true)
+  }
+  }, [text])
+  
+
   return (
     <div className="ContainerContact">
       <div className="Contact">
@@ -80,24 +132,74 @@ const Contact = () => {
         mensaje. Nos pondremos en contacto contigo lo antes posible.
       </p>
       <div className="ContainerForm">
-        <form className="Form">
+        <form className="Form" ref={form} id="formulario">
+          <span className="text-danger">{message}</span>
           <div className="Inputs">
             <div className="InputContact">
-              <label>Nombre</label>
-              <input className="bg-dark" type="text" />
+              <label>
+                Nombre{" "}
+                {!Validation.validateName(name) && !firstName && (
+                  <span className="text-danger">Completar</span>
+                )}
+              </label>
+              <input
+                className="bg-dark"
+                value={name}
+                onInput={(e) => setName(e.target.value)}
+                onBlur={() => setFirstName(false)}
+                required
+                maxLength={50}
+                placeholder="JulioDamian"
+              />
             </div>
             <div className="InputContact">
-              <label>Email</label>
-              <input className="bg-dark" type="mail" />
+              <label>
+                Email{" "}
+                {!Validation.validateMail(mail) && !firstMail && (
+                  <span className="text-danger">Completar</span>
+                )}
+              </label>
+              <input
+                className="bg-dark"
+                type="mail"
+                required
+                maxLength={40}
+                placeholder="Damian@TiendaDeMascotas.com"
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+                onBlur={() => setFirstMail(false)}
+              />
             </div>
           </div>
           <div className="TextArea">
-            <textarea className="bg-dark" name="" id=""></textarea>
+            <label>
+              Mensaje{" "}
+              {!Validation.validateName(text) && !firstText && (
+                <span className="text-danger">Completar</span>
+              )}
+            </label>
+            <textarea
+              className="bg-dark"
+              type="text"
+              required
+              maxLength={300}
+              placeholder="En la Tienda de Mascotas Odi encuentro todos los artículos que mi mascota necesita!"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              onBlur={() => !Validation.validateText(text)&&setFirstText(false)}
+            ></textarea>
           </div>
-          <div className="BtnContainer">
-          <NavLink>Enviar</NavLink>
-          </div>
-          
+          <div className="BtnContact">
+            <NavLink className="BtnContainer" onClick={() => HandleClick()}>
+            {Load.isLoaded ? (
+                  <>
+                    <Loader />
+                  </>
+                ) : (
+                  'Enviar'
+                )}
+            </NavLink>
+            </div>
         </form>
       </div>
       <div className="FooterContact mt-auto">
