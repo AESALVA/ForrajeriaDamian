@@ -15,6 +15,8 @@ import {
 } from "../UserProvider";
 import Loader from "./Loader";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+
 
 
 const Contact = () => {
@@ -47,6 +49,19 @@ const Contact = () => {
         form.current,
         "ugkrjxlh9YCbw85u7"
       );
+      Swal.fire({
+        title: "Excelente!",
+        text: "Su mensaje fue enviado con éxito!",
+        icon: "success",
+        iconColor: "#413f4a",
+        width: "20rem",
+        confirmButtonColor: "#413f4a",
+        background: "#151515",
+        color: "#fff",
+      });
+      setName('');
+      setMail('');
+      setText('');
       Load.setIsLoaded(false);
     } else {
       setMessage("Debe completar correctamente el formulario");
@@ -145,6 +160,7 @@ const Contact = () => {
               <input
                 className="bg-dark"
                 value={name}
+                name="name"
                 onInput={(e) => setName(e.target.value)}
                 onBlur={() => setFirstName(false)}
                 required
@@ -162,6 +178,7 @@ const Contact = () => {
               <input
                 className="bg-dark"
                 type="mail"
+                name="mail"
                 required
                 maxLength={40}
                 placeholder="Damian@TiendaDeMascotas.com"
@@ -181,6 +198,7 @@ const Contact = () => {
             <textarea
               className="bg-dark"
               type="text"
+              name="text"
               required
               maxLength={300}
               placeholder="En la Tienda de Mascotas Odi encuentro todos los artículos que mi mascota necesita!"
