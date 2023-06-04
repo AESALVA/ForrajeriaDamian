@@ -17,15 +17,12 @@ import Loader from "./Loader";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
-
-
 const Contact = () => {
   const auth = useUserContext();
   const navigate = useNavigate();
   const Load = useLoadedContext();
   const Validation = useValidationContext();
   const form = useRef();
-
 
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
@@ -59,9 +56,9 @@ const Contact = () => {
         background: "#151515",
         color: "#fff",
       });
-      setName('');
-      setMail('');
-      setText('');
+      setName("");
+      setMail("");
+      setText("");
       Load.setIsLoaded(false);
     } else {
       setMessage("Debe completar correctamente el formulario");
@@ -69,13 +66,15 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    if (Validation.validateText(text)) {
+      setFirstText(true);
+    }
+  }, [text]);
 
   useEffect(() => {
-  if(Validation.validateText(text)){
-    setFirstText(true)
-  }
-  }, [text])
-  
+    setMessage("");
+  }, [name, mail, text]);
 
   return (
     <div className="ContainerContact">
@@ -204,20 +203,22 @@ const Contact = () => {
               placeholder="En la Tienda de Mascotas Odi encuentro todos los artículos que mi mascota necesita!"
               value={text}
               onChange={(e) => setText(e.target.value)}
-              onBlur={() => !Validation.validateText(text)&&setFirstText(false)}
+              onBlur={() =>
+                !Validation.validateText(text) && setFirstText(false)
+              }
             ></textarea>
           </div>
           <div className="BtnContact">
             <NavLink className="BtnContainer" onClick={() => HandleClick()}>
-            {Load.isLoaded ? (
-                  <>
-                    <Loader />
-                  </>
-                ) : (
-                  'Enviar'
-                )}
+              {Load.isLoaded ? (
+                <>
+                  <Loader />
+                </>
+              ) : (
+                "Enviar"
+              )}
             </NavLink>
-            </div>
+          </div>
         </form>
       </div>
       <div className="FooterContact mt-auto">
