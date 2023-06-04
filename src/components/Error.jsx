@@ -11,7 +11,7 @@ const Error = () => {
         <div className="huella">
         <img src={huellaImg} alt="huellaImg" />
         </div>
-        <NavLink className='btnError'>Volver</NavLink>
+        <NavLink to="/" className='btnError'>Volver</NavLink>
     </div>
   )
 }
