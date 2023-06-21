@@ -16,14 +16,17 @@ const Products = () => {
 
   return (
     <>
-      <div className="TitleProducts">
-        <h2>Lista de Productos</h2>
+    <div className="WrapperProducts">
+    <div className="TitleProducts">
+      <h2>Lista de Productos</h2>
       </div>
       <div className="ContainerProducts">
         {Articles.data.map((product, i) => (
           <Product key={i} product={product} />
         ))}
       </div>
+    </div>
+      
     </>
   );
 };

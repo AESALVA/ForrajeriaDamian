@@ -1,7 +1,7 @@
 .ContainerCheckout{
     min-height: 100vh;
     width: 100%;
-    background: url("../assets/Bg.jpg");
+    background: url("../assets/Wallpaper.jpg");
     color: #fff;
     padding: 1rem;
 }
@@ -24,13 +24,15 @@
     padding: 2rem 0;
 }
 .Personal, .Summary{
-    border: 2px solid #fff;
+    border: 2px solid #151515;
     padding: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     color:#ffc918 ;
+    backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
 .Personal{
     padding: 2rem;
@@ -75,7 +77,7 @@
     margin: 0;
 }
 .BtnCheckout{
-    background: linear-gradient(0deg,#000c04,#0c220c);
+    background: linear-gradient(0deg,#151515,#363636);
     padding: 1rem;
     margin-top: auto;
 }

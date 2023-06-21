@@ -4,8 +4,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg,#000c04,#0c220c);
+  background: linear-gradient(120deg,#151515,#5e5c5c,#151515);
 }
+
+/* celeste : #0e9abd  */
 
 @keyframes pulse {
   0% {
@@ -27,14 +29,14 @@
   margin: 2rem;
   border-radius: 50%;
   position: relative;
-  background: linear-gradient(90deg, #ffc918, #ffc918);
+  background: linear-gradient(90deg, #0e9abd, #0e9abd);
   border: 2px solid #151515;
   z-index: 1;
 }
 .LogoFooter:hover{
   transition: 1s;
-  border: 2px solid #ffc918;
-  box-shadow: 0px 0px 15px 7px #ffc918;
+  border: 2px solid #0e9abd;
+  box-shadow: 0px 0px 15px 7px #0e9abd;
 }
 
 .LogoFooter > img {
@@ -51,7 +53,7 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #ffc918, #ffc918);
+  background: linear-gradient(90deg, #0e9abd, #0e9abd);
   border-radius: 50%;
   opacity: 0;
   scale: 0.95;
@@ -126,14 +128,14 @@
   position: relative;
   z-index: 1;
   border-radius: 50%;
-  border: 2px solid #151515  ;
+  border: 2px solid #7B8FA1  ;
 }
 
 .SocialIcons a:hover{
   transition: 1s;
-  border: 2px solid #ffc918;
-  box-shadow: 0px 0px 15px 7px #ffc918;
-  color: #ffc918;
+  border: 2px solid #0e9abd;
+  box-shadow: 0px 0px 15px 7px #0e9abd;
+  color: #0e9abd;
 }
 .SocialIcons a::before{
   content: "";
@@ -143,7 +145,7 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #ffc918, #0a550e);
+  background: linear-gradient(90deg, #0e9abd, #0e9abd);
   border-radius: 50%;
   opacity: 0;
   scale: 0.95;

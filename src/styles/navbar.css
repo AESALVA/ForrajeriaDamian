@@ -6,7 +6,7 @@
   align-items: center;
   padding: 1rem 2rem;
   transition: 400ms ease-in-out;
-  background: linear-gradient(180deg, #000c04, #0c220c);
+  background: linear-gradient(120deg,#151515,#5e5c5c,#151515);
 }
 .navbar .ul {
   display: flex;
@@ -134,7 +134,7 @@
     transform: scale(1, 0);
     transition: transform 400ms ease-in-out;
     transform-origin: top;
-    background: linear-gradient(0deg, #000c04, #0c220c);
+    background: linear-gradient(120deg,#151515,#5e5c5c,#151515);
     z-index: 1;
   }
 
@@ -152,7 +152,7 @@
     transform: scale(1, 1);
     transition: transform 400ms ease-in-out;
     transform-origin: top;
-    background: linear-gradient(0deg, #000c04, #0c220c);
+    background: linear-gradient(120deg,#151515,#5e5c5c,#151515);
     z-index: 1;
   }
   .NavListResponsive a {

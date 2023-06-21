@@ -1,43 +1,45 @@
 .DetailContainer {
   width: 100%;
-  background: url("../assets/Bg.jpg");
+  background: url("../assets/Wallpaper.jpg");
   color: #fff;
   padding: 2rem;
   display: flex;
   justify-content: center;
 }
 .Detail {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #fff;
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #151515;
+  border-radius: 1rem;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
-.DetailCard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.DetailCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.DetailFooter{
-    width: 100%;
-    padding: 1rem;
+.DetailFooter {
+  width: 100%;
+  padding: 1rem;
 }
-.DetailBtn{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-padding: 1rem;
-gap: 3rem;
+.DetailBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 3rem;
 }
-.DetailBtn a{
-    text-decoration: none;
-    color: #ffc918;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    background: linear-gradient(180deg, #000c04, #0c220c);
+.DetailBtn a {
+  text-decoration: none;
+  color: #ffc918;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(0deg,#151515,#363636);
 }
-.DetailBtn a:hover{
-    color: #fff;
+.DetailBtn a:hover {
+  color: #fff;
 }
 
 .CardDetail {
@@ -60,7 +62,7 @@ gap: 3rem;
 .Detalles {
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, #000c04, #0c220c);
+  background: linear-gradient(0deg,#151515,#363636);
   position: relative;
   margin: 0 0 5rem 0;
   padding: 1rem 0 1rem 0;
@@ -85,7 +87,7 @@ gap: 3rem;
   transform: scale(1, 0);
   transition: transform 250ms ease-in-out;
   transform-origin: top;
-  background: linear-gradient(0deg, #000c04, #0c220c);
+  background: linear-gradient(180deg,#151515,#363636);
   border-radius: 0 0 1rem 1rem;
   transform: opacity(0);
 }
@@ -100,7 +102,7 @@ gap: 3rem;
   transform: scale(1, 1);
   transition: transform 400ms ease-in-out;
   transform-origin: top;
-  background: linear-gradient(0deg, #000c04, #0c220c);
+  background: linear-gradient(180deg,#151515,#363636);
   border-radius: 0 0 1rem 1rem;
   transform: opacity(1);
 }
@@ -113,52 +115,51 @@ gap: 3rem;
   opacity: 1;
   transition: opacity 350ms ease-in-out 250ms;
 }
-.DetailCardMobile{
+.DetailCardMobile {
   display: none;
 }
 
-@media (max-width:750px){
-.DetailCard{
-  display: none;
-}
-.DetailFooter{
-  display: none;
-}
+@media (max-width: 750px) {
+  .DetailCard {
+    display: none;
+  }
+  .DetailFooter {
+    display: none;
+  }
 
-.DetailCardMobile{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.DetailCardMobile h3{
-  margin: 0;
-}
+  .DetailCardMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .DetailCardMobile h3 {
+    margin: 0;
+  }
 
-.CardDetail{
-align-items: center;
-}
-.CardDetail h1{
-  margin: 0;
-}
-.Detalles{
-  width: 80%;
-  margin: 0 0 7rem 0;
-}
-.DetailBtn{
-  gap: 1rem;
-  padding: 0 1rem 1rem 1rem;
-}
-.DetailImg{
-  padding: 0 1rem;
-  position: relative;
-}
-.BottomImgMobile{
-  background: #000c04bb;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-}
-
+  .CardDetail {
+    align-items: center;
+  }
+  .CardDetail h1 {
+    margin: 0;
+  }
+  .Detalles {
+    width: 80%;
+    margin: 0 0 7rem 0;
+  }
+  .DetailBtn {
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .DetailImg {
+    padding: 0 1rem;
+    position: relative;
+  }
+  .BottomImgMobile {
+    background: #000c04bb;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
 }

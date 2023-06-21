@@ -1,7 +1,7 @@
 .ContainerContact {
   min-height: 100vh;
   width: 100%;
-  background: url("../assets/Bg.jpg");
+  background: url("../assets/Wallpaper.jpg");
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -21,12 +21,14 @@ p {
   padding: 2rem;
 }
 .Text{
-  border: 2px solid #fff;
+  border: 2px solid #151515;
   border-radius: 1rem;
   padding: 2rem;
   max-width: 90rem;
   margin: auto;
   color: #ffc918;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
 .ContactWays ul {
   display: flex;
@@ -40,7 +42,7 @@ p {
 .ContactWays li {
   padding: 1rem;
   list-style-type: none;
-  border: 2px solid #fff;
+  border: 2px solid #151515;
   border-radius: 1rem;
   max-width: 30rem;
   min-width: 15rem;
@@ -48,6 +50,8 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
 
 .ContactWays a {
@@ -69,7 +73,7 @@ p {
   color: #ffc918;
 }
 .Form {
-  border: 2px solid #fff;
+  border: 2px solid #151515;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -77,6 +81,8 @@ p {
   width: 80rem;
   min-width: 20rem;
   min-height: 60vh;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
 .Inputs {
   display: flex;
@@ -119,7 +125,7 @@ textarea {
   color: #ffc918;
   text-decoration: none;
   border: 2px solid #151515;
-  background: linear-gradient(0deg, #000c04, #0c220c);
+  background: linear-gradient(0deg,#151515,#363636);
 }
 .BtnContainer:hover {
   color: #fff;

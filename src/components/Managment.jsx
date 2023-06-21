@@ -137,10 +137,10 @@ const Managment = () => {
         keyboard={false}
         size="lg"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+        <Modal.Header className="bg-dark text-white" closeButton>
+          <Modal.Title>Editar Artículo</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="bg-dark">
           <div className="Input">
             <label>Nombre</label>
             <input
@@ -186,7 +186,7 @@ const Managment = () => {
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
+        <Modal.Footer className="bg-dark">
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
@@ -201,11 +201,11 @@ const Managment = () => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+        <Modal.Header className="bg-dark text-white" closeButton>
           <Modal.Title>Eliminar Producto</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Esta seguro desea eliminar este producto ?.</Modal.Body>
-        <Modal.Footer>
+        <Modal.Body className="bg-dark text-white">Esta seguro desea eliminar este producto ?</Modal.Body>
+        <Modal.Footer className="bg-dark text-white">
           <Button variant="secondary" onClick={handleCloseDelete}>
             Close
           </Button>

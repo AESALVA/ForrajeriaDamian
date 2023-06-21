@@ -1,6 +1,6 @@
 .ContainerCart {
   width: 100%;
-  background: url("../assets/Bg.jpg");
+  background: url("../assets/Wallpaper.jpg");
   color: #fff;
   padding: 1rem;
   display: flex;
@@ -11,10 +11,12 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border: 2px solid #fff;
+  border: 2px solid #151515;
   border-radius: 1rem;
   color: #ffc918;
   gap: 1rem;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
 }
 table {
   width: 100%;
@@ -39,11 +41,13 @@ tbody td {
 }
 .Score {
   border-radius: 1rem;
-  border: 1px solid #fff;
+  border: 1px solid #151515;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  box-shadow: 0 0 30px #151515;
+
 }
 
 .CartBtn{
@@ -58,7 +62,7 @@ tbody td {
   color: #ffc918;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  background: linear-gradient(180deg, #000c04, #0c220c);
+    background: linear-gradient(0deg,#151515,#363636);
 }
 .CartBtn a:hover{
   color: #fff;
