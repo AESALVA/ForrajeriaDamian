@@ -5,6 +5,11 @@
   color: #fff;
   padding: 1rem;
 }
+.carousel{
+  height: 30rem;
+  object-fit: contain;
+  margin: auto;
+}
 .ContainerImg {
   display: flex;
   flex-wrap: wrap;
