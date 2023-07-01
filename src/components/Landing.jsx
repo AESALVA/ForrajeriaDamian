@@ -5,11 +5,18 @@ import imgDos from "../assets/landing1.png";
 import imgTres from "../assets/landing3.png";
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../assets/Carousel1.webp';
+import Container from 'react-bootstrap/Container';
+import imgMarkOne from '../assets/Kongo.png';
+import imgMarkTwo from '../assets/oldprince.png';
+import imgMarkThree from '../assets/pedigree.jpg';
+import imgMarkFour from '../assets/royalCanin.png';
+import imgMarkFive from '../assets/vitalcan.jpg';
 
 
 const Landing = () => {
   return (
     <div className="ContainerLanding">
+      <Container>
       <Carousel>
       <Carousel.Item>
         <img
@@ -49,6 +56,7 @@ const Landing = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </Container>
       <div className="ContainerImg">
         <div className="img">
           <img src={imgTres} alt="landing3" />
@@ -78,6 +86,13 @@ const Landing = () => {
             naturales y opciones ecológicas.
           </h2>
         </div>
+      </div>
+      <div className="marksContainer">
+<img src={imgMarkOne} alt="markimg" />
+<img src={imgMarkTwo} alt="markimg" />
+<img src={imgMarkThree} alt="markimg" />
+<img src={imgMarkFour} alt="markimg" />
+<img src={imgMarkFive} alt="markimg" />
       </div>
     </div>
   );

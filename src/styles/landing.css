@@ -5,7 +5,7 @@
   color: #fff;
   padding: 1rem;
 }
-.carousel{
+.carousel {
   height: 30rem;
   object-fit: contain;
   margin: auto;
@@ -31,12 +31,12 @@
 .img > img {
   width: 100%;
 }
-.imgBottom{
-    padding: 2rem;
-    max-width: 60rem;
+.imgBottom {
+  padding: 2rem;
+  max-width: 60rem;
 }
-.imgBottom > img{
-    width: 100%;
+.imgBottom > img {
+  width: 100%;
 }
 
 .Card {
@@ -53,5 +53,29 @@
   color: #ffc918;
   backdrop-filter: blur(50px);
   box-shadow: 0 0 30px #151515;
+}
+.marksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 5rem;
+}
 
+.marksContainer img {
+  aspect-ratio: 3/2;
+  width: 15%;
+  object-fit: contain;
+}
+
+@media (max-width:700px){
+  .marksContainer img{
+    width: 35%;
+  }
+}
+
+@media(max-width:350px){
+  .marksContainer{
+    display: none;
+  }
 }
