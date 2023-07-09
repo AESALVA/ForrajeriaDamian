@@ -1,0 +1,8 @@
+.ContainerArticles {
+  background: url("../assets/Wallpaper.jpg");
+  min-height: 100vh;
+}
+.titleArticles {
+  text-align: center;
+  padding: 1rem;
+}

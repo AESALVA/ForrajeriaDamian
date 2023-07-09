@@ -229,7 +229,28 @@ const UserProvider = ({ children }) => {
     },
   ];
 
-
+const Articles = [
+  {
+    id:'Royal',
+    name:'Royal',
+    type:[{name:'Royal'},{name:'Perfomance'}]
+  },
+  {
+    id:'Old',
+    name:'Old Prince',
+    type:[{name:'Cordero'},{name:'Equilibrium'},{name:'Carne'},{name:'Pollo'}]
+  },
+  {
+    id:'Vital',
+    name:'Vital Can',
+    type:[{name:'Balanceado'},{name:'Complete'}]
+  },
+  {
+    id:'Kongo',
+    name:'Kongo',
+    type:[{name:'Kongo Gold'},{name:'Tradicional'}]
+  }
+]
 
   useEffect(() => {
 setData(LISTA)

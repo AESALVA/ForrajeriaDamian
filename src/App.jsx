@@ -14,6 +14,7 @@ import Cart from "./components/Cart";
 import Managment from "./components/Managment";
 import Checkout from "./components/Checkout";
 import Error from "./components/Error";
+import Articles from './components/Articles';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/resetPass" element={<ResetPass />} />
         <Route path="/products" element={<Products />} />
         <Route path="/producto/:id" element={<ProductsDetails />} />
+        <Route path="/articles" element={<Articles />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/managment" element={<Managment />} />
         <Route path="/checkout" element={<Checkout />} />
