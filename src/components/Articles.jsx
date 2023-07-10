@@ -12,7 +12,7 @@ const Articles = () => {
   return (
     <div className="ContainerArticles">
       <div className="titleArticles">
-        <h2>Nuestra variedad de Articulos por marca</h2>
+        <h2>Nuestra selección de las mejores marcas para tus mascotas !</h2>
       </div>
       <div className="cardsContainer">
 
