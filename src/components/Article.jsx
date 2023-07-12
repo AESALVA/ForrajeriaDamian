@@ -9,11 +9,11 @@ const Article = ({article}) => {
         <h2>{article.title}</h2>
         <p>{article.name}</p>
         <div className="ProductImg">
-          {/* <img src={product.img} alt="Product" /> */}
+          <img src={article.img} alt="Product" />
         </div>
         <div className="CardBottom">
         <NavLink to={`/producto/${article.id}`} className="ProductBtn">
-          Ir al producto
+          Ver más
         </NavLink>
         </div>
       </div>

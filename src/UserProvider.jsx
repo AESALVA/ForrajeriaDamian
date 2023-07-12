@@ -1,6 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
 import img from './assets/productImg.png';
+import image from './assets/royal.png';
+import image2 from './assets/oldprince.png';
+import image3 from './assets/vitalcan.jpg';
+import image4 from './assets/Kongo.png';
 
 const userContext = React.createContext();
 const LoadedContext = React.createContext();
@@ -235,22 +239,22 @@ const Articles = [
   {
     id:'Royal',
     name:'Royal',
-    type:[{name:'Royal'},{name:'Perfomance'}]
+    img:image
   },
   {
     id:'Old',
     name:'Old Prince',
-    type:[{name:'Cordero'},{name:'Equilibrium'},{name:'Carne'},{name:'Pollo'}]
+    img:image2
   },
   {
     id:'Vital',
     name:'Vital Can',
-    type:[{name:'Balanceado'},{name:'Complete'}]
+    img:image3
   },
   {
     id:'Kongo',
     name:'Kongo',
-    type:[{name:'Kongo Gold'},{name:'Tradicional'}]
+    img:image4
   }
 ]
 

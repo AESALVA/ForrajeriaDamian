@@ -23,6 +23,7 @@
 
 .ProductImg {
   max-width: 12rem;
+  height: 18rem;
 }
 .ProductImg > img {
   width: 100%;
