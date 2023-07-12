@@ -31,6 +31,8 @@ const UserProvider = ({ children }) => {
 
   const [cart, setCart]= useState([]);
 
+  const [articles, setArticles]=useState([]);
+
   const validatePassword = (n = "hol") => {
     return (
       validator.isLength(n, { min: 8, max: 20 }) &&
@@ -253,7 +255,8 @@ const Articles = [
 ]
 
   useEffect(() => {
-setData(LISTA)
+setData(LISTA);
+setArticles(Articles);
   }, [])
   
 
@@ -270,7 +273,7 @@ setData(LISTA)
             validateText,
           }}
         >
-          <articlesContext.Provider value={{data,setData,LISTA,cart,setCart}}>
+          <articlesContext.Provider value={{data,setData,LISTA,cart,setCart,articles,setArticles}}>
             {children}
           </articlesContext.Provider>
         </ValidationContext.Provider>

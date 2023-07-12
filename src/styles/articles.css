@@ -5,4 +5,17 @@
 .titleArticles {
   text-align: center;
   padding: 1rem;
+  color: #fff;
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px #151515;
+}
+.cardsContainer{
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
 }

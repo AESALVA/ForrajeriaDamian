@@ -1,10 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from "react-router-dom";
 
-const Article = () => {
+
+const Article = ({article}) => {
   return (
-    <div className='ContainerArticle'>
-
-    </div>
+    <>
+      <div className="CardProduct">
+        <h2>{article.title}</h2>
+        <p>{article.name}</p>
+        <div className="ProductImg">
+          {/* <img src={product.img} alt="Product" /> */}
+        </div>
+        <div className="CardBottom">
+        <NavLink to={`/producto/${article.id}`} className="ProductBtn">
+          Ir al producto
+        </NavLink>
+        </div>
+      </div>
+    </>
   )
 }
 
