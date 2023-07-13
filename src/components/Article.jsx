@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 
 
 const Article = ({article}) => {
+
+
+
   return (
     <>
       <div className="CardProduct">
@@ -12,7 +15,7 @@ const Article = ({article}) => {
           <img src={article.img} alt="Product" />
         </div>
         <div className="CardBottom">
-        <NavLink to={`/producto/${article.id}`} className="ProductBtn">
+        <NavLink onClick={()=>console.log(article.id)} className="ProductBtn">
           Ver más
         </NavLink>
         </div>

@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import validator from "validator";
-import img from './assets/productImg.png';
-import image from './assets/royal.png';
-import image2 from './assets/oldprince.png';
-import image3 from './assets/vitalcan.jpg';
-import image4 from './assets/Kongo.png';
+import img from "./assets/productImg.png";
+import image from "./assets/royal.png";
+import image2 from "./assets/oldprince.png";
+import image3 from "./assets/vitalcan.jpg";
+import image4 from "./assets/Kongo.png";
 
 const userContext = React.createContext();
 const LoadedContext = React.createContext();
@@ -33,9 +33,9 @@ const UserProvider = ({ children }) => {
 
   const [data, setData] = useState([]);
 
-  const [cart, setCart]= useState([]);
+  const [cart, setCart] = useState([]);
 
-  const [articles, setArticles]=useState([]);
+  const [articles, setArticles] = useState([]);
 
   const validatePassword = (n = "hol") => {
     return (
@@ -166,7 +166,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:img,
+      img: img,
     },
     {
       id: "2",
@@ -179,7 +179,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
       quantity: 1,
       price: 500,
-      img:img,
+      img: img,
     },
     {
       id: "3",
@@ -192,7 +192,7 @@ const UserProvider = ({ children }) => {
         "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
       quantity: 1,
       price: 700,
-      img:img,
+      img: img,
     },
     {
       id: "4",
@@ -205,7 +205,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1000,
-      img:img,
+      img: img,
     },
     {
       id: "5",
@@ -218,7 +218,7 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1041,
-      img:img,
+      img: img,
     },
     {
       id: "6",
@@ -231,38 +231,117 @@ const UserProvider = ({ children }) => {
         "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
       quantity: 1,
       price: 1540,
-      img:img,
+      img: img,
     },
   ];
 
-const Articles = [
-  {
-    id:'Royal',
-    name:'Royal',
-    img:image
-  },
-  {
-    id:'Old',
-    name:'Old Prince',
-    img:image2
-  },
-  {
-    id:'Vital',
-    name:'Vital Can',
-    img:image3
-  },
-  {
-    id:'Kongo',
-    name:'Kongo',
-    img:image4
-  }
-]
+  const Articles = [
+    {
+      id: "Royal",
+      name: "Royal",
+      img: image,
+    },
+    {
+      id: "Old",
+      name: "Old Prince",
+      img: image2,
+      products: [
+        {
+          id: "1",
+          name: "Golden",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+          quantity: 1,
+          price: 1000,
+          img: img,
+        },
+        {
+          id: "2",
+          name: "Royal",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem ipsusdasddasdasdasdasd asdasdaddasdm dolor sit amet coasdasdnsectetur",
+          quantity: 1,
+          price: 500,
+          img: img,
+        },
+        {
+          id: "3",
+          name: "Old Prince",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem iasdasdasdapsum dolor sit amet conseasdadaasdadctetur",
+          quantity: 1,
+          price: 700,
+          img: img,
+        },
+        {
+          id: "4",
+          name: "Golden",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+          quantity: 1,
+          price: 1000,
+          img: img,
+        },
+        {
+          id: "5",
+          name: "Golden",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+          quantity: 1,
+          price: 1041,
+          img: img,
+        },
+        {
+          id: "6",
+          name: "Golden",
+          title: "Old Prince",
+          category: "Perro",
+          subcategory: "Adulto",
+          type: "Pollo y Carne",
+          description:
+            "Lorem ipsuma dolor sasdasdasdadasdit amet conssdasdasdectetur",
+          quantity: 1,
+          price: 1540,
+          img: img,
+        },
+      ],
+    },
+    {
+      id: "Vital",
+      name: "Vital Can",
+      img: image3,
+    },
+    {
+      id: "Kongo",
+      name: "Kongo",
+      img: image4,
+    },
+  ];
 
   useEffect(() => {
-setData(LISTA);
-setArticles(Articles);
-  }, [])
-  
+    setData(LISTA);
+    setArticles(Articles);
+  }, []);
 
   return (
     <userContext.Provider value={{ auth, setAuth, addUser, login, logout }}>
@@ -277,7 +356,17 @@ setArticles(Articles);
             validateText,
           }}
         >
-          <articlesContext.Provider value={{data,setData,LISTA,cart,setCart,articles,setArticles}}>
+          <articlesContext.Provider
+            value={{
+              data,
+              setData,
+              LISTA,
+              cart,
+              setCart,
+              articles,
+              setArticles,
+            }}
+          >
             {children}
           </articlesContext.Provider>
         </ValidationContext.Provider>
