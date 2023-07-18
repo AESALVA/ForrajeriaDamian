@@ -17,6 +17,7 @@ import Error from "./components/Error";
 import Articles from './components/Articles';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
+import { ArticlesDetails } from "./components/ArticlesDetails";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/producto/:id" element={<ProductsDetails />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/articles/:id" element={<ArticlesDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/managment" element={<Managment />} />
         <Route path="/checkout" element={<Checkout />} />

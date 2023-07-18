@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { NavLink } from "react-router-dom";
 
 
-export const ArticleDetail = () => {
+
+export const ArticleDetail = ({article}) => {
+
+
   return (
-    <div>ArticleDetail</div>
+    <>
+
+    </>
   )
 }

@@ -15,7 +15,7 @@ const Article = ({article}) => {
           <img src={article.img} alt="Product" />
         </div>
         <div className="CardBottom">
-        <NavLink onClick={()=>console.log(article.id)} className="ProductBtn">
+        <NavLink to={`/articles/${article.id}`}  className="ProductBtn">
           Ver más
         </NavLink>
         </div>
