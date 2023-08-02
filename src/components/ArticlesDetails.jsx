@@ -11,7 +11,7 @@ import { ArticleDetail } from "./ArticleDetail";
 export const ArticlesDetails = () => {
   const Articles = useArticlesContext();
   const params = useParams();
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState("");
   useEffect(() => {
     const aux = Articles.articles.find((article) => article.id === params.id);
     setArticle(aux);
