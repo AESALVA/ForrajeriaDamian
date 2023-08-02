@@ -5,7 +5,6 @@ import "../styles/product.css";
 
 
 const Art = ({art}) => {
-console.log(art)
   return (
     <>
 <div className="CardProduct">
