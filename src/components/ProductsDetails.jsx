@@ -19,6 +19,8 @@ const ProductsDetails = () => {
   useEffect(() => {
     const aux = Articles.data.find((article) => article.id === params.id);
     setProduct(aux);
+    const art = Articles.articles.find((article)=>article.products.find((arti)=>arti.id === params.id));
+    console.log(art)
   }, []);
   return (
     <>
